@@ -45,13 +45,17 @@ struct ContentView: View {
     var body: some View {
         TabView {
             VStack{
-                Text("   상상쓰님, 환영합니다")
-                    .font(.system(size: 35).bold())
+                Text("상상쓰님, 환영합니다")
+                    .font(.system(size: 30).bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Spacer()
-                Text("1")
-                Text("2")
-                Text("3")
+                    .padding([.leading])
+
+                Text("오늘의 카페")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.leading])
+                
+                
+                
             }
             .tabItem {
                 Image(systemName: "house")
