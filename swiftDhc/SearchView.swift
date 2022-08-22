@@ -32,7 +32,7 @@ struct SearchView: View {
                     hideKeyboard()
                 }
             }
-            .navigationBarTitle("검색기능")
+            .navigationBarTitle("검색")
             
         }
     }
