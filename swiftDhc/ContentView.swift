@@ -45,26 +45,24 @@ struct ContentView: View {
     var body: some View {
         TabView {
             VStack{
-                Text("상상쓰님, 환영합니다")
-                    .font(.system(size: 30).bold())
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding([.leading])
-
-                Text("오늘의 카페")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding([.leading])
-                
-                
-                
+                MainView()
+//                Text("상상쓰님, 환영합니다")
+//                    .font(.system(size: 30).bold())
+//                    .frame(maxWidth: .infinity, alignment: .leading)
+//                    .padding([.leading])
+//
+//                Text("오늘의 카페")
+//                    .frame(maxWidth: .infinity, alignment: .leading)
+//                    .padding([.leading])
             }
             .tabItem {
                 Image(systemName: "house")
                 Text("home")
-                
             }
             
             VStack{
-                Text("Another Tab")
+//                Text("Another Tab")
+                SearchView()
             }
             .tabItem {
                 Image(systemName: "magnifyingglass")
@@ -136,3 +134,11 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
