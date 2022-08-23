@@ -16,10 +16,10 @@ struct Search: View {
             List{
                 ForEach(cafe, id: \.self){ cafe in
                     HStack{
-                        Text(cafe.capitalized)
-                        Spacer()
-                        Image(systemName: "figure.walk")
-                            .foregroundColor(Color.blue)
+                        NavigationLink(destination: Text("IntroView")){
+                            Text(cafe.capitalized)
+                            Spacer()
+                        }
                     }
                     .padding()
                 }

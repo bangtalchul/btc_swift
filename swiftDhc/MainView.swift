@@ -19,6 +19,18 @@ struct MainView: View {
                 Text("오늘의 카페")
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding([.leading])
+                
+                ScrollView(.horizontal) {
+                            HStack {
+                                ForEach(0..<10) {
+                                    Text("숫자 \($0)")
+                                        .foregroundColor(.black)
+                                        .font(.largeTitle)
+                                        .background(Color.yellow)
+                                }
+                            }
+                            .frame(maxHeight: .infinity)
+                        }
             }
         }
     }

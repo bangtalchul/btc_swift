@@ -62,7 +62,6 @@ struct ContentView: View {
             }
             
             VStack{
-//                Text("Another Tab")
                 Search()
             }
             .tabItem {

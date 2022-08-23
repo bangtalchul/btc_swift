@@ -3,7 +3,7 @@
 //  swiftDhc
 //
 //  Created by 손수현 on 2022/08/22.
-//
+//  사용안함
 
 import SwiftUI
 
