@@ -42,6 +42,7 @@ struct ContentView: View {
     //        }
     //    }
     
+    // 220822 정희 테스트
     var body: some View {
         TabView {
             VStack{
