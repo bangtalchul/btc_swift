@@ -62,7 +62,7 @@ struct ContentView: View {
             
             VStack{
 //                Text("Another Tab")
-                SearchView()
+                Search()
             }
             .tabItem {
                 Image(systemName: "magnifyingglass")

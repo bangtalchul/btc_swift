@@ -23,7 +23,13 @@ struct SearchView: View {
                 
                 List {
                     ForEach(array.filter{$0.hasPrefix(searchText) || searchText == ""}, id:\.self) {
-                        searchText in Text(searchText)
+//                        searchText in Text(searchText)
+                        searchText in Button(action: {
+                            print(searchText)
+                            }) {
+                            Text(searchText)
+                        }
+
                     }
                 } //리스트의 스타일 수정
                 .listStyle(PlainListStyle())
@@ -31,6 +37,8 @@ struct SearchView: View {
                 .onTapGesture {
                     hideKeyboard()
                 }
+                
+                
             }
             .navigationBarTitle("검색")
             
