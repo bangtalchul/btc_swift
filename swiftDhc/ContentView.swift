@@ -78,7 +78,8 @@ struct ContentView: View {
                 
             }
             VStack{
-                Text("The Last Tab")
+                MyPageView()
+                //Text("The Last Tab")
             }
             .tabItem {
                 Image(systemName: "person")
