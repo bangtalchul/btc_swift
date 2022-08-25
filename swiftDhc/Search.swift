@@ -16,7 +16,7 @@ struct Search: View {
             List{
                 ForEach(cafe, id: \.self){ cafe in
                     HStack{
-                        NavigationLink(destination: Text("IntroView")){
+                        NavigationLink(destination: IntroView()){
                             Text(cafe.capitalized)
                             Spacer()
                         }
