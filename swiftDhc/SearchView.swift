@@ -29,7 +29,6 @@ struct SearchView: View {
                             }) {
                             Text(searchText)
                         }
-
                     }
                 } //리스트의 스타일 수정
                 .listStyle(PlainListStyle())
