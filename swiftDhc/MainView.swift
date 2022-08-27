@@ -10,6 +10,11 @@ import SwiftUI
 struct MainView: View {
     private var listOfCafe = CafeList
     @State var searchText = ""
+    
+    @State var locationText = ""
+    
+    @State var structOfCafeInfo = CafeInfoData//CafeInfo(cafeName: "", cafeLocation: "")
+
     var CafeImageName = "CafeImage"
 //    var TitleText = "test"
     @State var isActive = true
@@ -47,53 +52,120 @@ struct MainView: View {
                     Spacer()
                     Spacer()
                     
+                    //---------------------------
+//                    // 정희 테스트
+//                    Text("구조체 테스트")
+//                        .frame(maxWidth: .infinity, alignment: .leading)
+//                        .padding([.leading])
+//                    ScrollView(.horizontal) {
+//                        HStack {
+//                            ForEach(structOfCafeInfo){
+//                                valueCafeInfo in
+//                                HStack{
+//                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, locationText: valueCafeInfo.cafeLocation)){
+//                                        VStack{
+//                                            Image(CafeImageName)
+//                                                .resizable()
+//                                                .scaledToFit()
+//                                                .frame(width: 100, height:100)
+//                                            Text("\(valueCafeInfo.cafeName)")
+//                                                .foregroundColor(.black)
+//                                                .frame(width: 100)
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                        .frame(maxHeight: .infinity)
+//                    }
+//
+                    //---------------------------
+                    
                     Text("오늘의 카페")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
                     
                     ScrollView(.horizontal) {
                         HStack{
-                            ForEach(listOfCafe, id: \.self){
-                                listOfCafe in
-                                HStack{
+//                            ForEach(listOfCafe, id: \.self){
+//                                listOfCafe in
+//                                HStack{
+////                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
+////                                        VStack{
+////                                            Text("\(listOfCafe)")
+////                                        }
+////                                    }
+//
 //                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
 //                                        VStack{
+//                                            Image(CafeImageName)
+//                                                .resizable()
+//                                                .scaledToFit()
+//                                                .frame(width: 100, height:100)
 //                                            Text("\(listOfCafe)")
+//                                                .foregroundColor(.black)
+//                                                .frame(width: 100)
 //                                        }
 //                                    }
-                                
-                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
+//                                }
+//                            }
+                            
+                            // 정희 : 구조체 이용 -> 카페 이름, 위치 정보 전달
+                            ForEach(structOfCafeInfo){
+                                valueCafeInfo in
+                                HStack{
+                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
                                         VStack{
                                             Image(CafeImageName)
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: 100, height:100)
-                                            Text("\(listOfCafe)")
+                                            Text("\(valueCafeInfo.cafeName)")
                                                 .foregroundColor(.black)
                                                 .frame(width: 100)
                                         }
                                     }
                                 }
                             }
+                            
+                            
                         }
 
                         .frame(maxHeight: .infinity)
                     }
+                    
                     Text("오늘의 테마")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(listOfCafe, id: \.self){
-                                listOfCafe in
+//                            ForEach(listOfCafe, id: \.self){
+//                                listOfCafe in
+//                                HStack{
+//                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
+//                                        VStack{
+//                                            Image(CafeImageName)
+//                                                .resizable()
+//                                                .scaledToFit()
+//                                                .frame(width: 100, height:100)
+//                                            Text("\(listOfCafe)")
+//                                                .foregroundColor(.black)
+//                                                .frame(width: 100)
+//                                        }
+//                                    }
+//                                }
+//                            }
+                            
+                            ForEach(structOfCafeInfo){
+                                valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
+                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
                                         VStack{
                                             Image(CafeImageName)
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: 100, height:100)
-                                            Text("\(listOfCafe)")
+                                            Text("\(valueCafeInfo.cafeName)")
                                                 .foregroundColor(.black)
                                                 .frame(width: 100)
                                         }
@@ -108,18 +180,36 @@ struct MainView: View {
                     Text("내주변")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
+                    //  다시 살려야함
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(listOfCafe, id: \.self){
-                                listOfCafe in
+//                            ForEach(listOfCafe, id: \.self){
+//                                listOfCafe in
+//                                HStack{
+//                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
+//                                        VStack{
+//                                            Image(CafeImageName)
+//                                                .resizable()
+//                                                .scaledToFit()
+//                                                .frame(width: 100, height:100)
+//                                            Text("\(listOfCafe)")
+//                                                .foregroundColor(.black)
+//                                                .frame(width: 100)
+//                                        }
+//                                    }
+//                                }
+//                            }
+                            
+                            ForEach(structOfCafeInfo){
+                                valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
+                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
                                         VStack{
                                             Image(CafeImageName)
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: 100, height:100)
-                                            Text("\(listOfCafe)")
+                                            Text("\(valueCafeInfo.cafeName)")
                                                 .foregroundColor(.black)
                                                 .frame(width: 100)
                                         }

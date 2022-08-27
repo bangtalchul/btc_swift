@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// IntroView : 카페 정보
 struct IntroView: View {
     //@Binding var searchText2: String
     
@@ -14,6 +15,10 @@ struct IntroView: View {
     var cafeName: String = "비밀의 화원"
     //220817 수현추가
     var titleText = ""
+    
+    var locationText = ""
+    var score = 0.0
+//    var structOfCafeInfo = CafeInfo(cafeName: "", cafeLocation: "")
     
     
     var body: some View {
@@ -25,11 +30,19 @@ struct IntroView: View {
                 .frame(height: 250)
                 .clipped()
                 .padding(EdgeInsets(top:0, leading:0, bottom:20, trailing:0))
+            
             //220827 수현추가(카페명)
             Text(titleText)
+                .font(.title)
             VStack(alignment: .leading) {
-                Text("카페/테마 소개페이지")
-                    .font(.title)
+//                Text("카페/테마 소개페이지")
+//                    .font(.title)
+                HStack {
+                    Image(systemName: "location.fill").foregroundColor(.gray)
+                    Text(locationText).foregroundColor(.gray)
+                }
+                .padding(.trailing, 2)
+                
                 HStack {
                     Text("추천테마")
                         .font(.title2)
@@ -39,9 +52,14 @@ struct IntroView: View {
                 }
                 .padding(.top, 2)
                 
-                Image(systemName: "star")
-                    .padding(EdgeInsets(top:2, leading: 0, bottom: 2, trailing: 0))
+                HStack {
+                    StarRating(rating: .constant(score), maxRating: 5)
+                        .font(.title3)
+                    Text(String(format: "%.1f", score)).foregroundColor(.gray)
+                }
+                
                 Divider()
+                
             }
             .padding()
             
@@ -54,6 +72,6 @@ struct IntroView: View {
 
 struct IntroView_Previews: PreviewProvider {
     static var previews: some View {
-        IntroView()//searchText2: $searchText)
+        IntroView()
     }
 }
