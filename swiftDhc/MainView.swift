@@ -53,7 +53,7 @@ struct MainView: View {
                     Spacer()
                     
                     //---------------------------
-//                    // 정희 테스트
+//                    // 220828 정희 테스트
 //                    Text("구조체 테스트")
 //                        .frame(maxWidth: .infinity, alignment: .leading)
 //                        .padding([.leading])
@@ -110,7 +110,7 @@ struct MainView: View {
 //                                }
 //                            }
                             
-                            // 정희 : 구조체 이용 -> 카페 이름, 위치 정보 전달
+                            // 220828 정희 : 구조체 이용 -> 카페 이름, 위치 정보 전달
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
@@ -156,6 +156,7 @@ struct MainView: View {
 //                                }
 //                            }
                             
+                            // 220828 정희
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
@@ -200,6 +201,7 @@ struct MainView: View {
 //                                }
 //                            }
                             
+                            // 220828 정흐l
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{

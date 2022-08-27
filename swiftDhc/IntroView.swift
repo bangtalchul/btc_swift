@@ -20,13 +20,18 @@ struct IntroView: View {
     var score = 0.0
 //    var structOfCafeInfo = CafeInfo(cafeName: "", cafeLocation: "")
     
+    @State var structOfThemaInfo = ThemaInfoData
+    
     
     var body: some View {
+        
+        ScrollView() {
         VStack {
 //            Rectangle()
 //                .foregroundColor(.gray)
 //                .frame(height: 200)
             Image(cafeImageName)
+                .resizable()
                 .frame(height: 250)
                 .clipped()
                 .padding(EdgeInsets(top:0, leading:0, bottom:20, trailing:0))
@@ -34,9 +39,9 @@ struct IntroView: View {
             //220827 수현추가(카페명)
             Text(titleText)
                 .font(.title)
+            
+            // 카페 정보
             VStack(alignment: .leading) {
-//                Text("카페/테마 소개페이지")
-//                    .font(.title)
                 HStack {
                     Image(systemName: "location.fill").foregroundColor(.gray)
                     Text(locationText).foregroundColor(.gray)
@@ -57,16 +62,87 @@ struct IntroView: View {
                         .font(.title3)
                     Text(String(format: "%.1f", score)).foregroundColor(.gray)
                 }
+                .padding(EdgeInsets(top:1, leading: 0, bottom: 2, trailing: 0))
                 
-                Divider()
-                
+//                Divider()
             }
             .padding()
             
-            Spacer()
+            Divider()
+//            Spacer()
+            
+            ForEach($structOfThemaInfo){
+                valueThemaInfo in
+                VStack{
+                    ThemaListRow(themaInfo: valueThemaInfo)
+                }
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                .edgesIgnoringSafeArea(.all)
+                //.edgesIgnoringSafeArea(.bottom)
+            }
+            
+            
+//            List(structOfThemaInfo.indices) { themas in
+//                ThemaListRow(themaInfo: self.$structOfThemaInfo[themas])
+//            }
+//            .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+//            //.padding(EdgeInsets(top: 44, leading: 0, bottom: 24, trailing: 0))
+//            .edgesIgnoringSafeArea(.all)
+                
         
         }
+        }
+        .padding()
         
+        
+    }
+}
+
+struct ThemaSummaryView: View {
+    
+//    @State var structOfThemaInfo = ThemaInfoData
+    @Binding var themaInfo: ThemaInfo
+
+        var body: some View {
+            HStack(alignment: .center) {
+                Image(themaInfo.themaImageName)
+                    .resizable()
+                    .frame(width: 120, height: 180)
+                Spacer().frame(width:20)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(themaInfo.themaName)
+                        .font(.title)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(themaInfo.cafeName)
+                        .font(.caption)
+                    Spacer().frame(height:4)
+                    HStack {
+                        StarRating(rating: .constant(themaInfo.themaScore), maxRating: 5)
+                        Text(String(format: "%.1f", themaInfo.themaScore)).foregroundColor(.gray)
+                    }
+                    Text(themaInfo.themaDescription)
+                        .fixedSize(horizontal: false, vertical: true)
+                    .padding(EdgeInsets(top:1, leading: 0, bottom: 2, trailing: 0))
+                }
+                Spacer()
+                
+            }
+            .padding()
+        }
+    
+}
+
+struct ThemaListRow: View {
+    @Binding var themaInfo: ThemaInfo
+
+    var body: some View {
+        ZStack {
+            Color.white
+                .cornerRadius(12)
+            ThemaSummaryView(themaInfo: $themaInfo)
+        }
+        .fixedSize(horizontal: false, vertical: true)
+        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
     }
 }
 
