@@ -26,71 +26,69 @@ struct IntroView: View {
     var body: some View {
         
         ScrollView() {
-        VStack {
-//            Rectangle()
-//                .foregroundColor(.gray)
-//                .frame(height: 200)
-            Image(cafeImageName)
-                .resizable()
-                .frame(height: 250)
-                .clipped()
-                .padding(EdgeInsets(top:0, leading:0, bottom:20, trailing:0))
-            
-            //220827 수현추가(카페명)
-            Text(titleText)
-                .font(.title)
-            
-            // 카페 정보
-            VStack(alignment: .leading) {
-                HStack {
-                    Image(systemName: "location.fill").foregroundColor(.gray)
-                    Text(locationText).foregroundColor(.gray)
-                }
-                .padding(.trailing, 2)
+            VStack {
+    //            Rectangle()
+    //                .foregroundColor(.gray)
+    //                .frame(height: 200)
+                Image(cafeImageName)
+                    .resizable()
+                    .frame(height: 250)
+                    .clipped()
+                    .padding(EdgeInsets(top:0, leading:0, bottom:20, trailing:0))
                 
-                HStack {
-                    Text("추천테마")
-                        .font(.title2)
+                //220827 수현추가(카페명)
+                Text(titleText)
+                    .font(.title)
+                
+                // 카페 정보
+                VStack(alignment: .leading) {
+                    HStack {
+                        Image(systemName: "location.fill").foregroundColor(.gray)
+                        Text(locationText).foregroundColor(.gray)
+                    }
+                    .padding(.trailing, 2)
                     
-                    Text("테마1").foregroundColor(.gray)
-                    Text("테마2").foregroundColor(.gray)
+                    HStack {
+                        Text("추천테마")
+                            .font(.title2)
+                        
+                        Text("테마1").foregroundColor(.gray)
+                        Text("테마2").foregroundColor(.gray)
+                    }
+                    .padding(.top, 2)
+                    
+                    HStack {
+                        StarRating(rating: .constant(score), maxRating: 5)
+                            .font(.title3)
+                        Text(String(format: "%.1f", score)).foregroundColor(.gray)
+                    }
+                    .padding(EdgeInsets(top:1, leading: 0, bottom: 2, trailing: 0))
+                    
+    //                Divider()
                 }
-                .padding(.top, 2)
+                .padding()
                 
-                HStack {
-                    StarRating(rating: .constant(score), maxRating: 5)
-                        .font(.title3)
-                    Text(String(format: "%.1f", score)).foregroundColor(.gray)
+                Divider()
+    //            Spacer()
+                
+                ForEach($structOfThemaInfo){
+                    valueThemaInfo in
+                    VStack{
+                        ThemaListRow(themaInfo: valueThemaInfo)
+                    }
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                    .edgesIgnoringSafeArea(.all)
                 }
-                .padding(EdgeInsets(top:1, leading: 0, bottom: 2, trailing: 0))
                 
-//                Divider()
+                
+    //            List(structOfThemaInfo.indices) { themas in
+    //                ThemaListRow(themaInfo: self.$structOfThemaInfo[themas])
+    //            }
+    //            .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+    //            //.padding(EdgeInsets(top: 44, leading: 0, bottom: 24, trailing: 0))
+    //            .edgesIgnoringSafeArea(.all)
+                    
             }
-            .padding()
-            
-            Divider()
-//            Spacer()
-            
-            ForEach($structOfThemaInfo){
-                valueThemaInfo in
-                VStack{
-                    ThemaListRow(themaInfo: valueThemaInfo)
-                }
-                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                .edgesIgnoringSafeArea(.all)
-                //.edgesIgnoringSafeArea(.bottom)
-            }
-            
-            
-//            List(structOfThemaInfo.indices) { themas in
-//                ThemaListRow(themaInfo: self.$structOfThemaInfo[themas])
-//            }
-//            .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-//            //.padding(EdgeInsets(top: 44, leading: 0, bottom: 24, trailing: 0))
-//            .edgesIgnoringSafeArea(.all)
-                
-        
-        }
         }
         .padding()
         
@@ -99,7 +97,6 @@ struct IntroView: View {
 }
 
 struct ThemaSummaryView: View {
-    
 //    @State var structOfThemaInfo = ThemaInfoData
     @Binding var themaInfo: ThemaInfo
 
