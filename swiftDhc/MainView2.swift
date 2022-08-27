@@ -7,33 +7,16 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct MainView2: View {
     private var listOfCafe = CafeList
     @State var searchText = ""
     var CafeImageName = "CafeImage"
-//    var TitleText = "test"
-    @State var isActive = true
-
-//    @Binding var titleText: String
-//    init(titleText: Binding<String> =
-//        .constant("1111")){
-//         _titleText = titleText
-//        }
     
-    @State var students = [
-        Student(name: "김철수", score: 100),
-        Student(name: "김영희", score: 90),
-        Student(name: "이영수", score: 80),
-        Student(name: "이영희", score: 70),
-        Student(name: "박철수", score: 60),
-        Student(name: "박영희", score: 50),
-        Student(name: "최철수", score: 40),
-        Student(name: "최영희", score: 30),
-        Student(name: "정철수", score: 20),
-        Student(name: "정영희", score: 10),
-    ]
-
-    
+    @Binding var titleText: String
+    init(titleText: Binding<String> =
+        .constant("1111")){
+         _titleText = titleText
+        }
     
     var body: some View {
         NavigationView{
@@ -52,17 +35,11 @@ struct MainView: View {
                         .padding([.leading])
                     
                     ScrollView(.horizontal) {
-                        HStack{
+                        HStack {
                             ForEach(listOfCafe, id: \.self){
                                 listOfCafe in
                                 HStack{
-//                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
-//                                        VStack{
-//                                            Text("\(listOfCafe)")
-//                                        }
-//                                    }
-                                
-                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
+                                    NavigationLink(destination: IntroView()){
                                         VStack{
                                             Image(CafeImageName)
                                                 .resizable()
@@ -76,18 +53,18 @@ struct MainView: View {
                                 }
                             }
                         }
-
                         .frame(maxHeight: .infinity)
                     }
                     Text("오늘의 테마")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
+                    
                     ScrollView(.horizontal) {
                         HStack {
                             ForEach(listOfCafe, id: \.self){
                                 listOfCafe in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
+                                    NavigationLink(destination: IntroView()){
                                         VStack{
                                             Image(CafeImageName)
                                                 .resizable()
@@ -113,7 +90,7 @@ struct MainView: View {
                             ForEach(listOfCafe, id: \.self){
                                 listOfCafe in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: listOfCafe)){
+                                    NavigationLink(destination: IntroView()){
                                         VStack{
                                             Image(CafeImageName)
                                                 .resizable()
@@ -143,55 +120,9 @@ struct MainView: View {
     
 }
 
-//
-struct IntroView2: View {
-   
-//   @Binding var student: Student
-//    @Binding var titleText: String
-    var titleText = ""
-   
-   var body: some View {
-       VStack {
-//            Rectangle()
-//                .foregroundColor(.gray)
-//                .frame(height: 200)
-//           Image(cafeImageName)
-//               .frame(height: 250)
-//               .clipped()
-//               .padding(EdgeInsets(top:0, leading:0, bottom:20, trailing:0))
-           Text(titleText)
-//           VStack(alignment: .leading){
-//               Text("카페/테마 소개페이지")
-//                   .font(.title)
-//               HStack {
-//                   Text("추천테마")
-//                       .font(.title2)
-//
-//                   Text("테마1").foregroundColor(.gray)
-//                   Text("테마2").foregroundColor(.gray)
-//               }
-//               .padding(.top, 2)
-//
-//               Image(systemName: "star")
-//                   .padding(EdgeInsets(top:2, leading: 0, bottom: 2, trailing: 0))
-//               Divider()
-//           }
-//           .padding()
-//
-//           Spacer()
-       
-       }
-       
-   }
-   }
-
-
-
-
-
-struct MainView_Previews: PreviewProvider {
+struct MainView2_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView2()
         
     }
 }
