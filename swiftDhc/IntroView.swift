@@ -21,7 +21,7 @@ struct IntroView: View {
 //    var structOfCafeInfo = CafeInfo(cafeName: "", cafeLocation: "")
     
     @State var structOfThemaInfo = ThemaInfoData
-    
+    @State var valueThemaImage: String = ""
     
     var body: some View {
         
@@ -73,10 +73,10 @@ struct IntroView: View {
                 
                 // 테마 summary
                 ForEach($structOfThemaInfo){
-                    valueThemaInfo in
+                    $valueThemaInfo in
                     VStack{
-                        NavigationLink(destination: ThemaView()){
-                            ThemaListRow(themaInfo: valueThemaInfo)
+                        NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName)){
+                            ThemaListRow(themaInfo: $valueThemaInfo)
                                 .foregroundColor(.black)
                         }
                     }
