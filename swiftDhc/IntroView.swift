@@ -71,10 +71,14 @@ struct IntroView: View {
                 Divider()
     //            Spacer()
                 
+                // 테마 summary
                 ForEach($structOfThemaInfo){
                     valueThemaInfo in
                     VStack{
-                        ThemaListRow(themaInfo: valueThemaInfo)
+                        NavigationLink(destination: ThemaView()){
+                            ThemaListRow(themaInfo: valueThemaInfo)
+                                .foregroundColor(.black)
+                        }
                     }
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                     .edgesIgnoringSafeArea(.all)

@@ -129,8 +129,8 @@ struct MainView: View {
                             
                             
                         }
-
                         .frame(maxHeight: .infinity)
+                        .padding(EdgeInsets(top:0, leading: 10, bottom: 0, trailing: 10))
                     }
                     
                     Text("오늘의 테마")
@@ -174,6 +174,7 @@ struct MainView: View {
                             }
                         }
                         .frame(maxHeight: .infinity)
+                        .padding(EdgeInsets(top:0, leading: 10, bottom: 0, trailing: 10))
                     }
                     
                     
@@ -219,6 +220,7 @@ struct MainView: View {
                             }
                         }
                         .frame(maxHeight: .infinity)
+                        .padding(EdgeInsets(top:0, leading: 10, bottom: 0, trailing: 10))
                     }
                 }
             }

@@ -92,7 +92,7 @@ private extension MyPageView {
 // 프로필 이미지 구조체
 struct CircleImage: View {
     var image: Image
-    var imageHW: CGFloat = 300
+    var imageHW: CGFloat = 150//300
     
     var body: some View {
         image

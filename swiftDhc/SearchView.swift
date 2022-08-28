@@ -17,7 +17,7 @@ struct SearchView: View {
             List{
                 ForEach(structOfCafeInfo){ valueCafeInfo in
                     HStack{
-                        NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
+                        NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
                             Text("\(valueCafeInfo.cafeName)")
                             Spacer()
                         }
