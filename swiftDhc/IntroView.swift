@@ -15,7 +15,7 @@ struct IntroView: View {
     var cafeName: String = "비밀의 화원"
     //220817 수현추가
     var titleText = ""
-    
+    var imageText = ""
     var locationText = ""
     var score = 0.0
 //    var structOfCafeInfo = CafeInfo(cafeName: "", cafeLocation: "")
@@ -30,7 +30,7 @@ struct IntroView: View {
     //            Rectangle()
     //                .foregroundColor(.gray)
     //                .frame(height: 200)
-                Image(cafeImageName)
+                Image(imageText)
                     .resizable()
                     .frame(height: 250)
                     .clipped()
