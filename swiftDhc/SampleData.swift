@@ -30,6 +30,12 @@ public struct ThemaInfo: Identifiable {
     var themaScore: Double
     var themaImageName: String
 }
+
+public struct UserInfo: Identifiable {
+    public var id = UUID()
+    var name: String
+    var nickname: String
+}
  
 
 public var CafeList = [
@@ -72,3 +78,5 @@ public var ThemaInfoData = [ThemaInfo(cafeName: "비밀의화원 서면점", the
                             , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "테스트2", themaKeyword: "짱어려움", themaGenre: "드라마", themaDescription: "테스트임ㅁ미다~", themaScore: 4.5, themaImageName: "ThemaImageTest2")
                             , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "테스트3", themaKeyword: "짱쉬움", themaGenre: "추리", themaDescription: "테스트~~~", themaScore: 3.8, themaImageName: "ThemaImageTest3")
                             ]
+
+public var UserInfoData = [UserInfo(name: "박상혁", nickname: "상상쓰"), UserInfo(name: "손수현", nickname: "부산쌍칼"), UserInfo(name: "김정희", nickname: "정희입니다"), UserInfo(name: "김수현", nickname: "피자맥주어쩌고"), UserInfo(name: "문영화", nickname: "문무비"), UserInfo(name: "윤수빈", nickname: "bnk귀요미")]

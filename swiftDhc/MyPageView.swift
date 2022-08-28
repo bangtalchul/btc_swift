@@ -11,7 +11,8 @@ struct MyPageView: View {
     var UserImageName = "UserImageTest"
     var UserName: String = "핑구"
     var UserIntroduce: String = "즐거운 방탈출!"
-    
+    @State var structOfUserInfo = UserInfoData//CafeInfo(cafeName: "", cafeLocation: "")
+
     var body: some View {
         VStack{
             HStack {
@@ -56,6 +57,11 @@ private extension MyPageView {
                 //Spacer()
             }
             .padding(.top, 5)
+            
+            Text("내가 쓴 글")
+            Text("예약내역")
+            Text("최근 이용 내역")
+            Text("COLLECTION")
         }
         .padding()
         
