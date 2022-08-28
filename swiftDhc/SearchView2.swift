@@ -7,18 +7,20 @@
 
 import SwiftUI
 
-struct SearchView: View {
+struct SearchView2: View {
     private var listOfCafe = CafeList
     @State var searchText = ""
+    
     @State var structOfCafeInfo = CafeInfoData//CafeInfo(cafeName: "", cafeLocation: "")
     
     var body: some View {
         NavigationView{
             List{
-                ForEach(structOfCafeInfo){ valueCafeInfo in
+                ForEach(cafe, id: \.self){ cafe in
                     HStack{
-                        NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
-                            Text("\(valueCafeInfo.cafeName)")
+                        NavigationLink(destination:
+                            IntroView()){
+                            Text(cafe.capitalized)
                             Spacer()
                         }
                     }
@@ -37,8 +39,8 @@ struct SearchView: View {
     }
 }
 
-struct SearchView_Previews: PreviewProvider {
+struct SearchView2_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView2()
     }
 }
