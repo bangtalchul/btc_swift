@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282A05A128BB8E84004DF277 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282A05A028BB8E84004DF277 /* CommunityView.swift */; };
 		283B327628AE541C004232D6 /* swiftDhcApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B327528AE541C004232D6 /* swiftDhcApp.swift */; };
 		283B327828AE541C004232D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B327728AE541C004232D6 /* ContentView.swift */; };
 		283B327A28AE541E004232D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 283B327928AE541E004232D6 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		282A05A028BB8E84004DF277 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		283B327228AE541C004232D6 /* swiftDhc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftDhc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		283B327528AE541C004232D6 /* swiftDhcApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftDhcApp.swift; sourceTree = "<group>"; };
 		283B327728AE541C004232D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				28935EE628B9DEAF005B281C /* TestView.swift */,
 				28BD989E28BB3555002F86C8 /* SearchView.swift */,
 				2885FD0028BB672000A1CF59 /* LoginView.swift */,
+				282A05A028BB8E84004DF277 /* CommunityView.swift */,
 				283B327928AE541E004232D6 /* Assets.xcassets */,
 				283B327E28AE541E004232D6 /* Persistence.swift */,
 				283B328028AE541E004232D6 /* swiftDhc.xcdatamodeld */,
@@ -173,6 +176,7 @@
 				28E0782B28B33EF00073B7B0 /* MainView.swift in Sources */,
 				28BD989F28BB3555002F86C8 /* SearchView.swift in Sources */,
 				7BE7630328B533CE00BE4C85 /* MyPageView.swift in Sources */,
+				282A05A128BB8E84004DF277 /* CommunityView.swift in Sources */,
 				2885FD0128BB672000A1CF59 /* LoginView.swift in Sources */,
 				2854D3E128B4F11D00E1EA40 /* IntroView.swift in Sources */,
 				2854D3DF28B4EB7800E1EA40 /* SampleData.swift in Sources */,

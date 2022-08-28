@@ -12,23 +12,35 @@ struct MyPageView: View {
     var UserName: String = "핑구"
     var UserIntroduce: String = "즐거운 방탈출!"
     @State var structOfUserInfo = UserInfoData//CafeInfo(cafeName: "", cafeLocation: "")
-
+    
     var body: some View {
-        VStack{
-            HStack {
-                Spacer()
-                //Image(systemName: "gearshape")
-                Image(systemName: "gearshape.fill")
-                    .foregroundColor(Color.black)
-                Text("수정하기")
+        NavigationView{
+            VStack{
+                HStack {
+                    Spacer()
+                    //Image(systemName: "gearshape")
+                    Image(systemName: "gearshape.fill")
+                        .foregroundColor(Color.black)
+                    Text("수정하기")
                     //.padding(.trailing, 20)
                     
-            }
-            . padding(EdgeInsets(top: 0, leading:0, bottom: 130, trailing: 20))
+                }
+                . padding(EdgeInsets(top: 0, leading:0, bottom: 130, trailing: 20))
                 
-            UserImage
-                .padding()
-            UserInfo
+                UserImage
+                    .padding()
+                UserInfo
+                
+                List{
+                    NavigationLink(destination: CommunityView()){
+                        Text("내가 쓴 글")
+                    }
+                    Text("예약내역")
+                    Text("최근 이용 내역")
+                    Text("COLLECTION")
+                }
+                
+            }
         }
     }
     
@@ -50,7 +62,7 @@ private extension MyPageView {
         VStack {
             Text(UserName)
                 .font(.title)
-
+            
             HStack(alignment: .top) {
                 Text(UserIntroduce)
                     .font(.subheadline)
@@ -58,10 +70,18 @@ private extension MyPageView {
             }
             .padding(.top, 5)
             
-            Text("내가 쓴 글")
-            Text("예약내역")
-            Text("최근 이용 내역")
-            Text("COLLECTION")
+//            NavigationView{
+//                List{
+//                    NavigationLink(destination: CommunityView()){
+//                        Text("내가 쓴 글")
+//                    }
+//                    Text("예약내역")
+//                    Text("최근 이용 내역")
+//                    Text("COLLECTION")
+//                }
+//
+//            }
+            
         }
         .padding()
         

@@ -62,7 +62,8 @@ struct ContentView: View {
                 
             }
             VStack{
-                Text("The Last Tab")
+                CommunityView()
+//                Text("The Last Tab")
             }
             .tabItem {
                 Image(systemName: "message")

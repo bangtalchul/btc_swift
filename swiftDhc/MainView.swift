@@ -159,7 +159,7 @@ struct MainView: View {
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
+                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
                                         VStack{
                                             Image("\(valueCafeInfo.cafeImage)")
                                                 .resizable()
@@ -204,7 +204,7 @@ struct MainView: View {
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
+                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
                                         VStack{
                                             Image("\(valueCafeInfo.cafeImage)")
                                                 .resizable()
