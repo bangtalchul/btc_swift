@@ -35,7 +35,9 @@ struct MyPageView: View {
                     NavigationLink(destination: CommunityView()){
                         Text("내가 쓴 글")
                     }
-                    Text("예약내역")
+                    NavigationLink(destination: ReserveDetailView()){
+                        Text("예약내역")
+                    }
                     Text("최근 이용 내역")
                     Text("COLLECTION")
                 }
@@ -70,17 +72,17 @@ private extension MyPageView {
             }
             .padding(.top, 5)
             
-//            NavigationView{
-//                List{
-//                    NavigationLink(destination: CommunityView()){
-//                        Text("내가 쓴 글")
-//                    }
-//                    Text("예약내역")
-//                    Text("최근 이용 내역")
-//                    Text("COLLECTION")
-//                }
-//
-//            }
+            //            NavigationView{
+            //                List{
+            //                    NavigationLink(destination: CommunityView()){
+            //                        Text("내가 쓴 글")
+            //                    }
+            //                    Text("예약내역")
+            //                    Text("최근 이용 내역")
+            //                    Text("COLLECTION")
+            //                }
+            //
+            //            }
             
         }
         .padding()

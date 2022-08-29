@@ -12,6 +12,9 @@ struct ThemaView: View {
 //    @State var themaImageText: String = ""
     var themaImageText: String = ""
 //    @State var themaInfoDetail: ThemaInfo
+    var themaText = ""
+    var score = 0.0
+    var imageText = ""
     
     
     var body: some View {

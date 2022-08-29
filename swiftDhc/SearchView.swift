@@ -11,6 +11,7 @@ struct SearchView: View {
     private var listOfCafe = CafeList
     @State var searchText = ""
     @State var structOfCafeInfo = CafeInfoData//CafeInfo(cafeName: "", cafeLocation: "")
+    @State var structOfThemaInfo = ThemaInfoData
     
     var body: some View {
         NavigationView{
@@ -24,6 +25,17 @@ struct SearchView: View {
                     }
                     .padding()
                 }
+                
+                ForEach(structOfThemaInfo){ valueThemaInfo in
+                    HStack{
+                        NavigationLink(destination: ThemaView(themaText: valueThemaInfo.themaName, score: valueThemaInfo.themaScore, imageText: valueThemaInfo.themaImageName)){
+                            Text("\(valueThemaInfo.themaName)")
+                            Spacer()
+                        }
+                    }
+                    .padding()
+                }
+               
             }
             .searchable(text: $searchText)
         }
