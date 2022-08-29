@@ -13,26 +13,47 @@ struct ThemaView: View {
     var themaImageText: String = ""
 //    @State var themaInfoDetail: ThemaInfo
     var themaText = ""
+    var cafeText = ""
     var score = 0.0
-    var imageText = ""
+//    var imageText = ""
     
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Image(themaImageText)
-//                .resizable()
-                .frame(height: 250)
-                .clipped()
-                .padding(EdgeInsets(top:0, leading:0, bottom:20, trailing:0))
-            Text("테마 페이지")
+        ScrollView {
+            VStack {
+                Image(themaImageText)
+    //                .resizable()
+                    .frame(height: 250)
+                    .clipped()
+                    .padding(EdgeInsets(top:0, leading:0, bottom:20, trailing:0))
+                Text(themaText)
+                    .font(.title)
+                
+                VStack {
+                    Text(cafeText)
+                        .foregroundColor(.gray)
+                        .padding(.top, 2)
+                    
+                    HStack {
+                        StarRating(rating: .constant(score), maxRating: 5)
+                            .font(.title3)
+                        Text(String(format: "%.1f", score)).foregroundColor(.gray)
+                    }
+                    .padding(EdgeInsets(top:1, leading: 0, bottom: 2, trailing: 0))
+                    
+                }
+                .padding()
+                
+                Divider()
+                
+            }
+            .padding()
+            .navigationBarTitle(Text(verbatim: "테마 상세"), displayMode: .inline)
+            
+            Text("Thema View")
                 .font(.title)
-                .multilineTextAlignment(.center)
+            Spacer()
         }
-        .padding()
-        .navigationBarTitle(Text(verbatim: "제목"), displayMode: .inline)
-        Text("Thema View")
-            .font(.title)
-        Spacer()
     }
 }
 

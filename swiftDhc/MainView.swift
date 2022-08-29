@@ -160,7 +160,7 @@ struct MainView: View {
                             ForEach(structOfThemaInfo){
                                 valueThemaInfo in
                                 HStack{
-                                    NavigationLink(destination: ThemaView(themaText: valueThemaInfo.themaName, score: valueThemaInfo.themaScore, imageText: valueThemaInfo.themaImageName)){
+                                    NavigationLink(destination: ThemaView(themaImageText: valueThemaInfo.themaImageName, themaText: valueThemaInfo.themaName, cafeText:valueThemaInfo.cafeName, score: valueThemaInfo.themaScore)){
                                         VStack{
                                             Image("\(valueThemaInfo.themaImageName)")
                                                 .resizable()

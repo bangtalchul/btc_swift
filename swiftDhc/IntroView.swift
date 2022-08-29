@@ -75,7 +75,7 @@ struct IntroView: View {
                 ForEach($structOfThemaInfo){
                     $valueThemaInfo in
                     VStack{
-                        NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName)){
+                        NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName, themaText: $valueThemaInfo.wrappedValue.themaName, cafeText:$valueThemaInfo.wrappedValue.cafeName, score: $valueThemaInfo.wrappedValue.themaScore)){
                             ThemaListRow(themaInfo: $valueThemaInfo)
                                 .foregroundColor(.black)
                         }
@@ -122,9 +122,11 @@ struct ThemaSummaryView: View {
                         Text(String(format: "%.1f", themaInfo.themaScore)).foregroundColor(.gray)
                     }
                     Text(themaInfo.themaDescription)
+                        .foregroundColor(.gray)
                         .fixedSize(horizontal: false, vertical: true)
-                    .padding(EdgeInsets(top:1, leading: 0, bottom: 2, trailing: 0))
+                        .padding(EdgeInsets(top:2, leading: 0, bottom: 2, trailing: 0))
                 }
+                
                 Spacer()
                 
             }
