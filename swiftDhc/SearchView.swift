@@ -12,7 +12,6 @@ struct SearchView: View {
     @State var searchText = ""
     @State var structOfCafeInfo = CafeInfoData//CafeInfo(cafeName: "", cafeLocation: "")
     @State var structOfThemaInfo = ThemaInfoData
-    
     var body: some View {
         NavigationView{
             List{

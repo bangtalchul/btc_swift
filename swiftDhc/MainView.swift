@@ -14,6 +14,7 @@ struct MainView: View {
     @State var locationText = ""
     
     @State var structOfCafeInfo = CafeInfoData//CafeInfo(cafeName: "", cafeLocation: "")
+    @State var structOfThemaInfo = ThemaInfoData
 
     var CafeImageName = "CafeImage"
 //    var TitleText = "test"
@@ -156,16 +157,16 @@ struct MainView: View {
 //                            }
                             
                             // 220828 정희
-                            ForEach(structOfCafeInfo){
-                                valueCafeInfo in
+                            ForEach(structOfThemaInfo){
+                                valueThemaInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
+                                    NavigationLink(destination: ThemaView(themaText: valueThemaInfo.themaName, score: valueThemaInfo.themaScore, imageText: valueThemaInfo.themaImageName)){
                                         VStack{
-                                            Image("\(valueCafeInfo.cafeImage)")
+                                            Image("\(valueThemaInfo.themaImageName)")
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: 100, height:100)
-                                            Text("\(valueCafeInfo.cafeName)")
+                                            Text("\(valueThemaInfo.themaName)")
                                                 .foregroundColor(.black)
                                                 .frame(width: 100)
                                         }
