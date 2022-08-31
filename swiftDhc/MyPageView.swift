@@ -32,7 +32,7 @@ struct MyPageView: View {
                 UserInfo
                 
                 List{
-                    NavigationLink(destination: CommunityView()){
+                    NavigationLink(destination: MyCommunityView()){
                         Text("내가 쓴 글")
                     }
                     NavigationLink(destination: ReserveDetailView()){

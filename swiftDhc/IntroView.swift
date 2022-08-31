@@ -75,7 +75,9 @@ struct IntroView: View {
                 ForEach($structOfThemaInfo){
                     $valueThemaInfo in
                     VStack{
-                        NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName, themaText: $valueThemaInfo.wrappedValue.themaName, cafeText:$valueThemaInfo.wrappedValue.cafeName, score: $valueThemaInfo.wrappedValue.themaScore)){
+                        NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName, themaText: $valueThemaInfo.wrappedValue.themaName, cafeText:$valueThemaInfo.wrappedValue.cafeName, score: $valueThemaInfo.wrappedValue.themaScore)//.navigationBarBackButtonHidden(true)
+                        )
+                        {
                             ThemaListRow(themaInfo: $valueThemaInfo)
                                 .foregroundColor(.black)
                         }

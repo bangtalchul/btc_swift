@@ -45,6 +45,27 @@ public struct Review: Identifiable {
     var reviewScore: Double
     var reviewText: String
 }
+
+// 각각 코드로 매칭되어야 함
+public struct PostInfo: Identifiable {
+    public var id = UUID()
+    var userName: String // 닉네임
+    var postTitle: String
+    var postText: String
+    var postTime: String
+}
+
+public struct CommentInfo: Identifiable {
+    public var id = UUID()
+    var userName: String // 닉네임
+    var commentText: String
+    var commentTime: String
+}
+
+
+
+
+// Sample Data
  
 
 public var CafeList = [
@@ -94,3 +115,14 @@ public var ReviewData = [Review(cafeName: ThemaInfoData[0].cafeName, themaName: 
                          , Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[1].nickname, reviewScore: 3.2, reviewText: "난이도 무난해요")
                          , Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[2].nickname, reviewScore: 2.7, reviewText: "초보한테는 너무 어려웠어요ㅜㅠ")
                          ,Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[3].nickname, reviewScore: 5.0, reviewText: "오랜만에 진짜 재미있는 테마 즐긴 것 같아요!!")]
+
+
+
+public var PostInfoData = [PostInfo(userName: UserInfoData[0].nickname, postTitle: "서면 파티 구함", postText: "장르 안가림. \n같이 하실 분 구해여", postTime: "2022-08-31 19:00")
+                           , PostInfo(userName: UserInfoData[1].nickname, postTitle: "수치플 당하고 옴", postText: "아니 입장할 때 CCTV보고 춤추면 힌투 준다고 했단 말이야? 그래서 춤 개 열심히 췄는데 힌트를 안주는거;; 근데 벨 누르고 췄었어야 했던거... 그냥 춤 열심히 춘 사람 됨", postTime: "2022-07-29 18:56")
+                           , PostInfo(userName: UserInfoData[2].nickname, postTitle: "알려줄사람", postText: "부산에 추석에도 여는 카페 있어? ㅠㅜ", postTime: "2022-07-35 2:14")]
+
+public var CommentInfoData = [CommentInfo(userName: UserInfoData[1].nickname, commentText: "저요저요", commentTime: "2022-08-31 19:10")
+                              , CommentInfo(userName: UserInfoData[2].nickname, commentText: "언제 하나요?", commentTime: "2022-08-31 19:13")
+                              , CommentInfo(userName: UserInfoData[3].nickname, commentText: "공포 테마 가실?", commentTime: "2022-08-31 19:15")
+                              , CommentInfo(userName: UserInfoData[4].nickname, commentText: "서면 어디로 갈건뎅?", commentTime: "2022-08-31 19:25")]

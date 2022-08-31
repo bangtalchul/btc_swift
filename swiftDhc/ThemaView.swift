@@ -92,7 +92,9 @@ struct ThemaView: View {
                 Spacer()
                 
                 HStack {
-                    NavigationLink(destination: AllReviewView()) {
+                    NavigationLink(destination: AllReviewView()
+                        //.navigationBarBackButtonHidden(true)
+                    ) {
                         Text("더보기 ")
                             .font(.title3)
                             .foregroundColor(.gray)
@@ -104,6 +106,7 @@ struct ThemaView: View {
             }
             .padding()
             
+            // 리뷰는 3개정도만 노출
             ForEach(0..<3) { i in
                 VStack {
                     ReviewListRow(review: $structOfReview[i])
