@@ -7,8 +7,11 @@
 
 import SwiftUI
 import CoreData
+import Firebase
+import GoogleSignIn
 
 struct ContentView: View {
+    @AppStorage("log_status") var logStatus: Bool = false
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
@@ -44,44 +47,68 @@ struct ContentView: View {
     
     // 220822 정희 테스트
     var body: some View {
-        TabView {
-            VStack{
-                MainView()
-            }
-            .tabItem {
-                Image(systemName: "house")
-                Text("home")
-            }
-            
-            VStack{
-                SearchView()
-            }
-            .tabItem {
-                Image(systemName: "magnifyingglass")
-                Text("search")
-                
-            }
-            VStack{
-                CommunityView()
-//                Text("The Last Tab")
-            }
-            .tabItem {
-                Image(systemName: "message")
-                Text("community")
-                
-            }
-            VStack{
-                MyPageView()
-                //Text("The Last Tab")
-            }
-            .tabItem {
-                Image(systemName: "person")
-                Text("mypage")
-            }
-            //            .badge(10)
-            
+        if logStatus{
+            DemoHome()
+        }else{
+            Login()
         }
-        .font(.headline)
+        
+
+    }
+    
+    @ViewBuilder
+    func DemoHome()->some View{
+                TabView {
+                    VStack{
+                        MainView()
+                    }
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("home")
+                    }
+        
+                    VStack{
+                        SearchView()
+                    }
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("search")
+        
+                    }
+                    VStack{
+                        CommunityView()
+        //                Text("The Last Tab")
+                    }
+                    .tabItem {
+                        Image(systemName: "message")
+                        Text("community")
+        
+                    }
+                    VStack{
+                        MyPageView()
+                        //Text("The Last Tab")
+                    }
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("mypage")
+                    }
+                    //            .badge(10)
+        
+                }
+                .font(.headline)
+//        Text("Logged in")
+//            .navigationTitle("multi-login")
+//            .toolbar{
+//                ToolbarItem{
+//                    Button("로그아웃"){
+//                        try? Auth.auth().signOut()
+//                        GIDSignIn.sharedInstance.signOut()
+//                        withAnimation(.easeInOut){
+//                            logStatus = false
+//                        }
+//                    }
+//                }
+//            }
     }
     
     private func addItem() {

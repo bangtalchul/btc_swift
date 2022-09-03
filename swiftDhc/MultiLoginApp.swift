@@ -1,17 +1,14 @@
 //
-//  swiftDhcApp.swift
+//  MultiLoginApp.swift
 //  swiftDhc
 //
-//  Created by 손수현 on 2022/08/18.
+//  Created by 손수현 on 2022/09/03.
 //
 
 import SwiftUI
 import Firebase
 
-@main
-struct swiftDhcApp: App {
-//    let persistenceController = PersistenceController.shared
-
+struct MultiLoginApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup{

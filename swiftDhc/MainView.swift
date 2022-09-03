@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
+import GoogleSignIn
+import GoogleSignInSwift
 
 struct MainView: View {
+    @AppStorage("log_status") var logStatus: Bool = false
+
     private var listOfCafe = CafeList
     @State var searchText = ""
     
@@ -45,12 +50,22 @@ struct MainView: View {
         NavigationView{
             TabView{
                 VStack{
+                    HStack{
                     Text("상상쓰님, 환영합니다!")
                         .font(.system(size: 30).bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
                     Spacer()
                     Spacer()
+                    
+                        Button("logout"){
+                            try? Auth.auth().signOut()
+                            GIDSignIn.sharedInstance.signOut()
+                            withAnimation(.easeInOut){
+                                logStatus = false
+                            }
+                        }
+                    }
                     
                     //---------------------------
 //                    // 220828 정희 테스트
@@ -228,7 +243,20 @@ struct MainView: View {
                 }
             }
         }
+        .toolbar{
+            ToolbarItem{
+                Button("logout"){
+                    try? Auth.auth().signOut()
+                    GIDSignIn.sharedInstance.signOut()
+                    withAnimation(.easeInOut){
+                        logStatus = false
+                    }
+                }
+            }
+        }
     }
+    
+    
     
     var cafe: [String] {
         let lcCafe = listOfCafe.map {$0.lowercased()}
