@@ -27,16 +27,33 @@ class LoginViewModel: ObservableObject {
     }
     
     func logGoogleUser(user: GIDGoogleUser){
-        print("11111")
         Task{
             do{
-                print("22222")
                 guard let idToken = user.authentication.idToken else {return}
                 let accessToken = user.authentication.accessToken
 //                let credential = OAuthProvider.credential(withProviderID: idToken, accessToken: accessToken)
                 let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
                 try await Auth.auth().signIn(with: credential)
-                print("success")
+//                print("success")
+               
+                let user = Auth.auth().currentUser
+                if let user = user {
+                  // The user's ID, unique to the Firebase project.
+                  // Do NOT use this value to authenticate with your backend server,
+                  // if you have one. Use getTokenWithCompletion:completion: instead.
+                  let uid = user.uid
+                  let email = user.email
+                  let photoURL = user.photoURL
+                  var multiFactorString = "MultiFactor: "
+                  for info in user.multiFactor.enrolledFactors {
+                    multiFactorString += info.displayName ?? "[DispayName]"
+                    multiFactorString += " "
+                  }
+                  // ...
+                }
+                print(user?.email) //이메일 가져오기
+                
+                
                 await MainActor.run(body: {
                     withAnimation(.easeInOut){
                         withAnimation(.easeInOut){logStatus = true}
