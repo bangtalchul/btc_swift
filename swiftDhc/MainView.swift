@@ -42,6 +42,7 @@ struct MainView: View {
                         .font(.system(size: 30).bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
+                        .padding([.top, .leading, .bottom])
                     Spacer()
                     Spacer()
                     
@@ -84,6 +85,8 @@ struct MainView: View {
                     //---------------------------
                     
                     Text("오늘의 카페")
+                        .font(.title3)
+                        .fontWeight(.semibold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
                     
@@ -131,7 +134,8 @@ struct MainView: View {
                                     }
                                 }
                             }
-                            
+                            .navigationBarTitle("", displayMode: .automatic)
+                            .navigationBarHidden(true)
                             
                         }
                         .frame(maxHeight: .infinity)
@@ -139,8 +143,10 @@ struct MainView: View {
                     }
                     
                     Text("오늘의 테마")
+                        .font(.title3)
+                        .fontWeight(.semibold)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding([.leading])
+                        .padding([.top, .leading])
                     ScrollView(.horizontal) {
                         HStack {
 //                            ForEach(listOfCafe, id: \.self){
@@ -177,6 +183,8 @@ struct MainView: View {
                                     }
                                 }
                             }
+                            .navigationBarTitle("", displayMode: .automatic)
+                            .navigationBarHidden(true)
                         }
                         .frame(maxHeight: .infinity)
                         .padding(EdgeInsets(top:0, leading: 10, bottom: 0, trailing: 10))
@@ -184,6 +192,8 @@ struct MainView: View {
                     
                     
                     Text("내주변")
+                        .font(.title3)
+                        .fontWeight(.semibold)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
                     //  다시 살려야함
@@ -223,6 +233,8 @@ struct MainView: View {
                                     }
                                 }
                             }
+                            .navigationBarTitle("", displayMode: .automatic)
+                            .navigationBarHidden(true)
                         }
                         .frame(maxHeight: .infinity)
                         .padding(EdgeInsets(top:0, leading: 10, bottom: 0, trailing: 10))

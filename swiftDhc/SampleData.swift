@@ -126,3 +126,4 @@ public var CommentInfoData = [CommentInfo(userName: UserInfoData[1].nickname, co
                               , CommentInfo(userName: UserInfoData[2].nickname, commentText: "언제 하나요?", commentTime: "2022-08-31 19:13")
                               , CommentInfo(userName: UserInfoData[3].nickname, commentText: "공포 테마 가실?", commentTime: "2022-08-31 19:15")
                               , CommentInfo(userName: UserInfoData[4].nickname, commentText: "서면 어디로 갈건뎅?", commentTime: "2022-08-31 19:25")]
+public var cnt = CommentInfoData.count

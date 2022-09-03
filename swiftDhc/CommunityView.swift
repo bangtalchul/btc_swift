@@ -14,40 +14,47 @@ struct CommunityView: View {
     
 //    var commentCnt = structOfComment.count
     
-    var commentCnt = 3
+//    var commentCnt = 3
+    var commentCnt = cnt
     
     var body: some View {
-        ScrollView {
+        NavigationView {
+            ScrollView() {
 
-            VStack {
-                HStack {
-                    Text("수다방")
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Spacer()
-                }
-                .padding(EdgeInsets(top:0, leading: 10, bottom:0, trailing: 10))
-                
-                Spacer()
-                
-                ForEach($structOfPost) {$valuePostInfo in
-                    VStack{
-                        NavigationLink(destination: CommunityDetailView(test: "hello"))
-                        {
-                            PostListRow(postInfo: $valuePostInfo, cnt: commentCnt)
-                                .foregroundColor(.black)
-                        }
+                VStack {
+                    HStack {
+                        Text("수다방")
+                            .font(.title)
+                            .fontWeight(.bold)
+                        Spacer()
                     }
+                    .padding(EdgeInsets(top:0, leading: 10, bottom:0, trailing: 10))
+                    
+                    //Spacer()
+                    
+                    ForEach($structOfPost) {
+                        $valuePostInfo in
+                        VStack{
+                            NavigationLink(destination: CommunityDetailView(structOfPost: $valuePostInfo.wrappedValue)
+                            ) {
+                                PostListRow(postInfo: $valuePostInfo, cnt: commentCnt)
+                                    .foregroundColor(.black)
+                            }
+                        }
+                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                        .edgesIgnoringSafeArea(.all)
+                    }
+                    .navigationBarTitle("", displayMode: .automatic)
+                    .navigationBarHidden(true)
+                    // NavigationView 사용시의 위 여백 없애는건데... 왜 여기에...
                     
                 }
-                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                .edgesIgnoringSafeArea(.all)
-                
-                
-            }
+    //            .padding()
+    //            Text("community view")
+            }// End of ScrollView
             .padding()
-            Text("community view")
-        }
+        }// End of NavigationView
+        
     }
 }
 
