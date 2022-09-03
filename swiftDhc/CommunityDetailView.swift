@@ -83,7 +83,6 @@ struct PostDetailView: View {
                 .font(.body)
                 .foregroundColor(.black)
                 .padding(EdgeInsets(top:2, leading: 4, bottom: 2, trailing: 4))
-            
         }
         .padding()
     }

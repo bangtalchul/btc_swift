@@ -105,8 +105,6 @@ struct PostSummaryView: View {
                         .font(.caption)
                 }
             }
-        
-            
         }
         .padding()
         
