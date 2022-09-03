@@ -37,10 +37,19 @@ public struct UserInfo: Identifiable {
     var nickname: String
 }
 
+//public struct Review: Identifiable {
+//    public var id = UUID()
+//    var cafeName: String
+//    var themaName: String
+//    var userName: String // 닉네임
+//    var reviewScore: Double
+//    var reviewText: String
+//}
+
 public struct Review: Identifiable {
     public var id = UUID()
-    var cafeName: String
-    var themaName: String
+//    var cafeName: String
+//    var themaName: String
     var userName: String // 닉네임
     var reviewScore: Double
     var reviewText: String
@@ -111,12 +120,19 @@ public var ThemaInfoData = [ThemaInfo(cafeName: "비밀의화원 서면점", the
 
 public var UserInfoData = [UserInfo(name: "박상혁", nickname: "상상쓰"), UserInfo(name: "손수현", nickname: "부산쌍칼"), UserInfo(name: "김정희", nickname: "정희입니다"), UserInfo(name: "김수현", nickname: "피자맥주어쩌고"), UserInfo(name: "문영화", nickname: "문무비"), UserInfo(name: "윤수빈", nickname: "bnk귀요미")]
 
-public var ReviewData = [Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[0].nickname, reviewScore: 4.8, reviewText: "진짜1도안무섭고굉장히EZ하네요 ㅋㅋㅋ")
-                         , Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[1].nickname, reviewScore: 3.2, reviewText: "난이도 무난해요")
-                         , Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[2].nickname, reviewScore: 2.7, reviewText: "초보한테는 너무 어려웠어요ㅜㅠ")
-                         ,Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[3].nickname, reviewScore: 5.0, reviewText: "오랜만에 진짜 재미있는 테마 즐긴 것 같아요!!")]
+//public var ReviewData = [Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[0].nickname, reviewScore: 4.8, reviewText: "진짜1도안무섭고굉장히EZ하네요 ㅋㅋㅋ")
+//                         , Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[1].nickname, reviewScore: 3.2, reviewText: "난이도 무난해요")
+//                         , Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[2].nickname, reviewScore: 2.7, reviewText: "초보한테는 너무 어려웠어요ㅜㅠ")
+//                         ,Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[3].nickname, reviewScore: 5.0, reviewText: "오랜만에 진짜 재미있는 테마 즐긴 것 같아요!!")
+//                         ,Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[4].nickname, reviewScore: 4.3, reviewText: "돈 값 했음")
+//                         ,Review(cafeName: ThemaInfoData[0].cafeName, themaName: ThemaInfoData[0].themaName, userName: UserInfoData[5].nickname, reviewScore: 5.0, reviewText: "오랜만에 진짜 재미있는 테마 즐긴 것 같아요!!")]
 
-
+public var ReviewData = [Review(userName: UserInfoData[0].nickname, reviewScore: 4.8, reviewText: "진짜1도안무섭고굉장히EZ하네요 ㅋㅋㅋ")
+                         , Review(userName: UserInfoData[1].nickname, reviewScore: 3.2, reviewText: "난이도 무난해요")
+                         , Review(userName: UserInfoData[2].nickname, reviewScore: 2.7, reviewText: "초보한테는 너무 어려웠어요ㅜㅠ")
+                         ,Review(userName: UserInfoData[3].nickname, reviewScore: 5.0, reviewText: "오랜만에 진짜 재미있는 테마 즐긴 것 같아요!!")
+                         ,Review(userName: UserInfoData[4].nickname, reviewScore: 4.3, reviewText: "돈 값 했음")
+                         ,Review(userName: UserInfoData[5].nickname, reviewScore: 5.0, reviewText: "오랜만에 진짜 재미있는 테마 즐긴 것 같아요!!")]
 
 public var PostInfoData = [PostInfo(userName: UserInfoData[0].nickname, postTitle: "서면 파티 구함", postText: "장르 안가림. \n같이 하실 분 구해여", postTime: "2022-08-31 19:00")
                            , PostInfo(userName: UserInfoData[1].nickname, postTitle: "수치플 당하고 옴", postText: "아니 입장할 때 CCTV보고 춤추면 힌투 준다고 했단 말이야? 그래서 춤 개 열심히 췄는데 힌트를 안주는거;; 근데 벨 누르고 췄었어야 했던거... 그냥 춤 열심히 춘 사람 됨", postTime: "2022-07-29 18:56")

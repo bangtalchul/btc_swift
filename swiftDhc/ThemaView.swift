@@ -92,7 +92,7 @@ struct ThemaView: View {
                 Spacer()
                 
                 HStack {
-                    NavigationLink(destination: AllReviewView()
+                    NavigationLink(destination: AllReviewView(cafeText: cafeText, themaText: themaText)
                         //.navigationBarBackButtonHidden(true)
                     ) {
                         Text("더보기 ")
@@ -109,7 +109,7 @@ struct ThemaView: View {
             // 리뷰는 3개정도만 노출
             ForEach(0..<3) { i in
                 VStack {
-                    ReviewListRow(review: $structOfReview[i])
+                    ReviewListRow(review: $structOfReview[i], cafeN: cafeText, themaN: themaText)
                 }
                 .padding()
                 .edgesIgnoringSafeArea(.all)
@@ -126,6 +126,8 @@ struct ThemaView: View {
 // 리뷰
 struct ReviewSummaryView: View {
     @Binding var review: Review
+    var cafeN: String
+    var themaN: String
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -145,11 +147,11 @@ struct ReviewSummaryView: View {
             }
             
             HStack {
-                Text(review.cafeName)
+                Text(cafeN)
                     .foregroundColor(.gray)
                 Text(" | ")
                     .foregroundColor(.gray)
-                Text(review.themaName)
+                Text(themaN)
                     .foregroundColor(.gray)
             }
 //            .padding(.top, 1)
@@ -164,12 +166,14 @@ struct ReviewSummaryView: View {
 
 struct ReviewListRow: View {
     @Binding var review: Review
+    var cafeN: String
+    var themaN: String
     
     var body: some View {
         ZStack {
             Color.white
                 .cornerRadius(12)
-            ReviewSummaryView(review: $review)
+            ReviewSummaryView(review: $review, cafeN: cafeN, themaN: themaN)
         }
         .fixedSize(horizontal: false, vertical: true)
         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
