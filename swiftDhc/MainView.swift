@@ -46,7 +46,7 @@ struct MainView: View {
                     Spacer()
                     Spacer()
                     
-                        Button("logout"){
+                        Button("로그아웃"){
                             try? Auth.auth().signOut()
                             GIDSignIn.sharedInstance.signOut()
                             withAnimation(.easeInOut){

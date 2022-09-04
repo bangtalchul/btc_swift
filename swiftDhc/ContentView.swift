@@ -52,8 +52,6 @@ struct ContentView: View {
         }else{
             Login()
         }
-        
-
     }
     
     @ViewBuilder
@@ -86,7 +84,6 @@ struct ContentView: View {
                     }
                     VStack{
                         MyPageView()
-                        //Text("The Last Tab")
                     }
                     .tabItem {
                         Image(systemName: "person")
@@ -96,8 +93,7 @@ struct ContentView: View {
         
                 }
                 .font(.headline)
-//        Text("Logged in")
-//            .navigationTitle("multi-login")
+
 //            .toolbar{
 //                ToolbarItem{
 //                    Button("로그아웃"){
