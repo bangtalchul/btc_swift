@@ -12,6 +12,8 @@ import GoogleSignIn
 
 struct ContentView: View {
     @AppStorage("log_status") var logStatus: Bool = false
+    @AppStorage("user_name") var userName: String = ""
+    
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
@@ -93,18 +95,6 @@ struct ContentView: View {
         
                 }
                 .font(.headline)
-
-//            .toolbar{
-//                ToolbarItem{
-//                    Button("로그아웃"){
-//                        try? Auth.auth().signOut()
-//                        GIDSignIn.sharedInstance.signOut()
-//                        withAnimation(.easeInOut){
-//                            logStatus = false
-//                        }
-//                    }
-//                }
-//            }
     }
     
     private func addItem() {

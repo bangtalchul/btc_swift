@@ -30,7 +30,7 @@ struct MainView: View {
             TabView{
                 VStack{
                     HStack{
-                    Text(userName + "님, 환영합니다!")
+                        Text(userName + "님, 환영합니다!")
                         .font(.system(size: 30).bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])

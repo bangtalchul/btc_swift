@@ -9,8 +9,9 @@ import SwiftUI
 
 struct MyPageView: View {
     var UserImageName = "UserImageTest"
-    var UserName: String = "핑구"
+//    var UserName: String = "핑구"
     var UserIntroduce: String = "즐거운 방탈출!"
+    @AppStorage("user_name") var userName: String = ""
     @State var structOfUserInfo = UserInfoData//CafeInfo(cafeName: "", cafeLocation: "")
     
     var body: some View {
@@ -21,7 +22,11 @@ struct MyPageView: View {
                     //Image(systemName: "gearshape")
                     Image(systemName: "gearshape.fill")
                         .foregroundColor(Color.black)
-                    Text("수정하기")
+//                    Text("수정하기")
+                    NavigationLink(destination: MyPageUpdateView()){
+                        Text("수정하기")
+                    }                    
+                    .foregroundColor(.black)
                     //.padding(.trailing, 20)
                     
                 }
@@ -62,7 +67,7 @@ private extension MyPageView {
     // 유저 정보
     var UserInfo: some View {
         VStack {
-            Text(UserName)
+            Text(userName)
                 .font(.title)
             
             HStack(alignment: .top) {

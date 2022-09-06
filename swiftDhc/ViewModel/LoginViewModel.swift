@@ -17,6 +17,8 @@ class LoginViewModel: ObservableObject {
     @AppStorage("log_status") var logStatus: Bool = false
     @AppStorage("user_name") var userName: String = ""
     
+    
+    
     func handleError(error: Error) async{
         await MainActor.run(body: {
             errorMessage = error.localizedDescription
@@ -49,7 +51,6 @@ class LoginViewModel: ObservableObject {
                   }
                   // ...
                 }
-                print(user?.displayName)
                 
                 await MainActor.run(body: {
                     withAnimation(.easeInOut){

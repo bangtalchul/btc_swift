@@ -37,22 +37,6 @@ struct Login: View {
                 }
             }
         }
-        //        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        //        Button("로그인", action: {
-        //
-        //            if let clientID = FirebaseApp.app()?.options.clientID{
-        //                GoogleSignInButton{
-        //                    GIDSignIn.sharedInstance.signIn(with: .init(clientID: clientID), presenting: UIApplication.shared.rootController()){
-        //                        user, error in
-        //                        if let error = error{
-        //                            print(error.localizedDescription)
-        //                            return
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //
-        //        })
     }
 }
 
