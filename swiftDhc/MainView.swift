@@ -12,6 +12,7 @@ import GoogleSignInSwift
 
 struct MainView: View {
     @AppStorage("log_status") var logStatus: Bool = false
+    @AppStorage("user_name") var userName: String = ""
 
     private var listOfCafe = CafeList
     @State var searchText = ""
@@ -22,23 +23,14 @@ struct MainView: View {
     @State var structOfThemaInfo = ThemaInfoData
 
     var CafeImageName = "CafeImage"
-//    var TitleText = "test"
     @State var isActive = true
 
-//    @Binding var titleText: String
-//    init(titleText: Binding<String> =
-//        .constant("1111")){
-//         _titleText = titleText
-//        }
-    
-    
-    
     var body: some View {
         NavigationView{
             TabView{
                 VStack{
                     HStack{
-                    Text("상상쓰님, 환영합니다!")
+                    Text(userName + "님, 환영합니다!")
                         .font(.system(size: 30).bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading])
@@ -53,6 +45,8 @@ struct MainView: View {
                                 logStatus = false
                             }
                         }
+                        .foregroundColor(.black)
+                        .padding()
                     }
                     
                     //---------------------------

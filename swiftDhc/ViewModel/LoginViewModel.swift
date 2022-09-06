@@ -15,9 +15,7 @@ class LoginViewModel: ObservableObject {
     @Published var showError: Bool = false
     @Published var errorMessage: String = ""
     @AppStorage("log_status") var logStatus: Bool = false
-
-    
-    
+    @AppStorage("user_name") var userName: String = ""
     
     func handleError(error: Error) async{
         await MainActor.run(body: {
@@ -51,12 +49,12 @@ class LoginViewModel: ObservableObject {
                   }
                   // ...
                 }
-                print(user?.email) //이메일 가져오기
-                
+                print(user?.displayName)
                 
                 await MainActor.run(body: {
                     withAnimation(.easeInOut){
-                        withAnimation(.easeInOut){logStatus = true}
+                        withAnimation(.easeInOut){logStatus = true; userName = user?.displayName ?? ""
+                        }
                     }
                 })
             }catch{
