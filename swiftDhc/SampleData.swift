@@ -71,7 +71,13 @@ public struct CommentInfo: Identifiable {
     var commentTime: String
 }
 
-
+public struct ReservTime: Identifiable {
+    public var id = UUID()
+    var cafeName: String
+    var themeName: String
+    var reserveTime: String
+    
+}
 
 
 // Sample Data

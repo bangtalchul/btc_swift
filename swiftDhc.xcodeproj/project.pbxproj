@@ -33,6 +33,7 @@
 		7B0BC6F228BB78FE003503A0 /* ThemaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0BC6F128BB78FE003503A0 /* ThemaView.swift */; };
 		7B0D32AA28BF724D00D9D5D1 /* MyCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D32A928BF724D00D9D5D1 /* MyCommunityView.swift */; };
 		7B0D32AC28BF800100D9D5D1 /* CommunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0D32AB28BF800100D9D5D1 /* CommunityDetailView.swift */; };
+		7B0EC78628C786A900D3E6FA /* ReservationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EC78528C786A900D3E6FA /* ReservationDetailView.swift */; };
 		7B20765728BE40C000A34C0D /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20765628BE40BF00A34C0D /* ReservationView.swift */; };
 		7B34813528BE554E00F49755 /* AllReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34813428BE554E00F49755 /* AllReviewView.swift */; };
 		7BE7630328B533CE00BE4C85 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7630228B533CE00BE4C85 /* MyPageView.swift */; };
@@ -64,6 +65,7 @@
 		7B0BC6F128BB78FE003503A0 /* ThemaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaView.swift; sourceTree = "<group>"; };
 		7B0D32A928BF724D00D9D5D1 /* MyCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCommunityView.swift; sourceTree = "<group>"; };
 		7B0D32AB28BF800100D9D5D1 /* CommunityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailView.swift; sourceTree = "<group>"; };
+		7B0EC78528C786A900D3E6FA /* ReservationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailView.swift; sourceTree = "<group>"; };
 		7B20765628BE40BF00A34C0D /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
 		7B34813428BE554E00F49755 /* AllReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReviewView.swift; sourceTree = "<group>"; };
 		7BE7630228B533CE00BE4C85 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				7B0BC6F128BB78FE003503A0 /* ThemaView.swift */,
 				7B34813428BE554E00F49755 /* AllReviewView.swift */,
 				7B20765628BE40BF00A34C0D /* ReservationView.swift */,
+				7B0EC78528C786A900D3E6FA /* ReservationDetailView.swift */,
 				7B34813628BE5B6500F49755 /* Returns */,
 				28935EE628B9DEAF005B281C /* TestView.swift */,
 				28BD989E28BB3555002F86C8 /* SearchView.swift */,
@@ -259,6 +262,7 @@
 				7B0D32AA28BF724D00D9D5D1 /* MyCommunityView.swift in Sources */,
 				7B20765728BE40C000A34C0D /* ReservationView.swift in Sources */,
 				28BD989F28BB3555002F86C8 /* SearchView.swift in Sources */,
+				7B0EC78628C786A900D3E6FA /* ReservationDetailView.swift in Sources */,
 				7BE7630328B533CE00BE4C85 /* MyPageView.swift in Sources */,
 				282A05A128BB8E84004DF277 /* CommunityView.swift in Sources */,
 				2885FD0128BB672000A1CF59 /* LoginView.swift in Sources */,

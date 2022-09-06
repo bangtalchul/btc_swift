@@ -57,7 +57,7 @@ struct ThemaView: View {
             
             // 예약 버튼
             ZStack{
-                    NavigationLink(destination: ReservationView(), tag: 1, selection: self.$tagOfReserv ) {
+                    NavigationLink(destination: ReservationView(cafeText: cafeText, themeText: themaText), tag: 1, selection: self.$tagOfReserv ) {
                       EmptyView()
                     }
             }
