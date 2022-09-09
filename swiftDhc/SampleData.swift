@@ -71,14 +71,27 @@ public struct CommentInfo: Identifiable {
     var commentTime: String
 }
 
-public struct ReservTime: Identifiable {
+public struct ReserveInfo: Identifiable {
     public var id = UUID()
     var cafeName: String
     var themeName: String
-    var reserveTime: String
-    
+    var reserveDate: String
+    var reserveTime: [String]
 }
 
+public struct ReserveState: Identifiable {
+    public var id = UUID()
+    var reserveST: [Bool]
+}
+
+public struct BookingInfo: Identifiable {
+    public var id = UUID()
+    var userName: String
+    var cafeName: String
+    var themaName: String
+    var bookingDate: String
+    var bookingTime: String
+}
 
 // Sample Data
  
@@ -149,3 +162,11 @@ public var CommentInfoData = [CommentInfo(userName: UserInfoData[1].nickname, co
                               , CommentInfo(userName: UserInfoData[3].nickname, commentText: "공포 테마 가실?", commentTime: "2022-08-31 19:15")
                               , CommentInfo(userName: UserInfoData[4].nickname, commentText: "서면 어디로 갈건뎅?", commentTime: "2022-08-31 19:25")]
 public var cnt = CommentInfoData.count
+
+public var ReserveInfoData = [ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-13", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"])
+                          , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-17", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"])
+                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-21", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30", "19:00"])]
+
+public var ReserveStateDate = [ReserveState(reserveST: [true, true, true, true, false, false])
+                               , ReserveState(reserveST: [true, true, true, true, true, false, true])
+                               , ReserveState(reserveST: [false, true, true, true, false, false, true])]
