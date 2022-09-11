@@ -20,7 +20,7 @@ struct ReservationDetailView: View {
         
         
         VStack{
-            Text("예약 확인")
+            Text("한번 더 확인해 주세요.")
                 .font(.title)
         }
     }
