@@ -145,7 +145,8 @@ struct ReservationView: View {
                     
                     // 예약 버튼
                     ZStack{
-                            NavigationLink(destination: ReserveDetailView(), tag: 1, selection: self.$tagOfReservation ) {
+                        NavigationLink(destination: ReservationDetailView(cafeText: cafeText, themeText: themeText, pickDate: pickDate, pickTime: pickTime)
+                                       , tag: 1, selection: self.$tagOfReservation ) {
                               EmptyView()
                             }
     //                        .isDetailLink(false)
@@ -189,8 +190,6 @@ struct ReservationView: View {
                 }
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding()
-//                    .foregroundColor(.white)
-//                    .background(Color(red: 85/255, green: 32/255, blue: 132/255))
                 .cornerRadius(40)
             }
             .buttonStyle(MyButtonStyle())
