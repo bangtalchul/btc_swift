@@ -14,6 +14,9 @@ struct ContentView: View {
     @AppStorage("log_status") var logStatus: Bool = false
     @AppStorage("user_name") var userName: String = ""
     
+    @State var isActive : Bool = false
+
+    
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(

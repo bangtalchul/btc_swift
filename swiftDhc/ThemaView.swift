@@ -15,6 +15,10 @@ struct ThemaView: View {
     var themaText = ""
     var cafeText = ""
     var score = 0.0
+    
+    var keywordText = ""
+    var genreText = ""
+    var descText = ""
 //    var imageText = ""
     
     @State var tagOfReserv:Int? = nil
@@ -35,25 +39,41 @@ struct ThemaView: View {
                 VStack {
                     Text(cafeText)
                         .foregroundColor(.gray)
-                        .padding(.top, 2)
+                        .padding(.top, 1)
                     
                     HStack {
                         StarRating(rating: .constant(score), maxRating: 5)
                             .font(.title3)
                         Text(String(format: "%.1f", score)).foregroundColor(.gray)
                     }
-                    .padding(EdgeInsets(top:1, leading: 0, bottom: 2, trailing: 0))
+                    .padding(EdgeInsets(top:1, leading: 0, bottom: 1, trailing: 0))
+                    
+                    HStack {
+                        Text(genreText)
+                        Text(" | ")
+                        Text(keywordText)
+                    }
+                    .foregroundColor(.gray)
+                    .font(.callout)
+                    
                     
                 }
                 .padding()
                 
-                //Divider()
+                Divider()
+                
+                
                 
             }
             .padding()
             .navigationBarTitle(Text(verbatim: "테마 상세"), displayMode: .inline)
             
 
+            Text(descText)
+                .foregroundColor(.gray)
+                .padding([.leading, .bottom, .trailing])
+            
+            Divider()
             
             // 예약 버튼
             ZStack{
@@ -81,6 +101,7 @@ struct ThemaView: View {
             .padding()
             
             Divider()
+            
             
             
             // 리뷰

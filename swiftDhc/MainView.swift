@@ -113,7 +113,7 @@ struct MainView: View {
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)
+                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore, timeText: valueCafeInfo.cafeTime)
                                         //.navigationBarBackButtonHidden(true)
                                     ){
                                         VStack{
@@ -164,7 +164,7 @@ struct MainView: View {
                             ForEach(structOfThemaInfo){
                                 valueThemaInfo in
                                 HStack{
-                                    NavigationLink(destination: ThemaView(themaImageText: valueThemaInfo.themaImageName, themaText: valueThemaInfo.themaName, cafeText:valueThemaInfo.cafeName, score: valueThemaInfo.themaScore)){
+                                    NavigationLink(destination: ThemaView(themaImageText: valueThemaInfo.themaImageName, themaText: valueThemaInfo.themaName, cafeText:valueThemaInfo.cafeName, score: valueThemaInfo.themaScore, keywordText: valueThemaInfo.themaKeyword, genreText: valueThemaInfo.themaGenre, descText: valueThemaInfo.themaDescription)){
                                         VStack{
                                             Image("\(valueThemaInfo.themaImageName)")
                                                 .resizable()

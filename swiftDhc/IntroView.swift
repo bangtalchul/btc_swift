@@ -18,6 +18,7 @@ struct IntroView: View {
     var imageText = ""
     var locationText = ""
     var score = 0.0
+    var timeText = "" 
 //    var structOfCafeInfo = CafeInfo(cafeName: "", cafeLocation: "")
     
     @State var structOfThemaInfo = ThemaInfoData
@@ -41,12 +42,24 @@ struct IntroView: View {
                     .font(.title)
                 
                 // 카페 정보
-                VStack(alignment: .leading) {
-                    HStack {
-                        Image(systemName: "location.fill").foregroundColor(.gray)
-                        Text(locationText).foregroundColor(.gray)
+                //(alignment: .leading)
+                VStack {
+                    
+                    VStack {
+                        HStack {
+                            Image(systemName: "location.fill").foregroundColor(.gray)
+                            Text(locationText)
+                                .foregroundColor(.gray)
+                        }
+                        .padding(.trailing, 2)
+                        
+                        
+                        Text(timeText)
+                            .foregroundColor(.gray)
+                            .padding(.top, 1)
+                        
                     }
-                    .padding(.trailing, 2)
+                    .padding()
                     
                     HStack {
                         Text("추천테마")
@@ -62,20 +75,24 @@ struct IntroView: View {
                             .font(.title3)
                         Text(String(format: "%.1f", score)).foregroundColor(.gray)
                     }
-                    .padding(EdgeInsets(top:1, leading: 0, bottom: 2, trailing: 0))
+                    .padding(EdgeInsets(top:0.5, leading: 0, bottom: 2, trailing: 0))
                     
     //                Divider()
                 }
                 .padding()
                 
-                Divider()
+//                Divider()
     //            Spacer()
                 
                 // 테마 summary
                 ForEach($structOfThemaInfo){
                     $valueThemaInfo in
                     VStack{
-                        NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName, themaText: $valueThemaInfo.wrappedValue.themaName, cafeText:$valueThemaInfo.wrappedValue.cafeName, score: $valueThemaInfo.wrappedValue.themaScore)//.navigationBarBackButtonHidden(true)
+                        NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName, themaText: $valueThemaInfo.wrappedValue.themaName, cafeText:$valueThemaInfo.wrappedValue.cafeName, score: $valueThemaInfo.wrappedValue.themaScore,
+                            keywordText: $valueThemaInfo.wrappedValue.themaKeyword,
+                            genreText: $valueThemaInfo.wrappedValue.themaGenre,
+                            descText: $valueThemaInfo.wrappedValue.themaDescription
+                            )//.navigationBarBackButtonHidden(true)
                         )
                         {
                             ThemaListRow(themaInfo: $valueThemaInfo)
@@ -127,6 +144,7 @@ struct ThemaSummaryView: View {
                         .foregroundColor(.gray)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(EdgeInsets(top:2, leading: 0, bottom: 2, trailing: 0))
+                        .lineLimit(1)
                 }
                 
                 Spacer()
