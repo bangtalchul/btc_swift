@@ -43,8 +43,12 @@ struct MyPageView: View {
                     NavigationLink(destination: ReserveDetailView()){
                         Text("예약내역")
                     }
-                    Text("최근 이용 내역")
-                    Text("COLLECTION")
+                    NavigationLink(destination: RecentReserveView()){
+                        Text("최근 이용 내역")
+                    }
+                    NavigationLink(destination: CollectionView()){
+                        Text("COLLECTION")
+                    }
                 }
                 
             }
