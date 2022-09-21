@@ -135,8 +135,8 @@ struct ReviewListRow2: View {
 }
 
 
-struct AllReviewView_Previews: PreviewProvider {
-    static var previews: some View {
-        AllReviewView()
-    }
-}
+//struct AllReviewView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AllReviewView()
+//    }
+//}

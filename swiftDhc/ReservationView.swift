@@ -18,6 +18,7 @@ private let dateFormatter: DateFormatter = {
 struct ReservationView: View {
     var cafeText = ""
     var themeText = ""
+    var memberCnt = 0
     
     
     @State var tagOfReservation:Int? = nil
@@ -37,6 +38,11 @@ struct ReservationView: View {
     @State var pickTime = ""
     @State var pickState = false
     
+    
+//    @Binding var rootIsActive : Bool
+    
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         VStack {
@@ -136,6 +142,22 @@ struct ReservationView: View {
                         Text("인원 추가")
                             .font(.title2)
                             .fontWeight(.semibold)
+                            .padding(.bottom, 2)
+                        
+                        Text("이 테마의 권장 인원 수는 ")
+                            .foregroundColor(.gray)
+                            .font(.body)
+                        +
+                        Text(String(format: "%0d", memberCnt))
+                        +
+                        Text("명입니다.")
+                            .foregroundColor(.gray)
+                            .font(.body)
+                        
+                        
+                        ReservationPartyView()
+                        
+                        
                     }
                     
                     
@@ -145,11 +167,13 @@ struct ReservationView: View {
                     
                     // 예약 버튼
                     ZStack{
-                        NavigationLink(destination: ReservationDetailView(cafeText: cafeText, themeText: themeText, pickDate: pickDate, pickTime: pickTime)
+                        NavigationLink(destination: ReservationDetailView(cafeText: cafeText, themeText: themeText, pickDate: pickDate, pickTime: pickTime
+//                                                                          , shouldPopToRootView: self.$rootIsActive
+                                                                         )
                                        , tag: 1, selection: self.$tagOfReservation ) {
                               EmptyView()
                             }
-    //                        .isDetailLink(false)
+                            .isDetailLink(false)
                     }
                         
                     
@@ -180,6 +204,7 @@ struct ReservationView: View {
             Button(action: {
                 self.tagOfReservation = 1
                 
+//                self.presentationMode.wrappedValue.dismiss()
               }) {
                 HStack {
                     Image(systemName: "calendar")
@@ -394,8 +419,8 @@ func dateTimeSubString(str: String, from: Int, to: Int) -> String {
 
 
 
-struct ReservationView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReservationView()
-    }
-}
+//struct ReservationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ReservationView()
+//    }
+//}

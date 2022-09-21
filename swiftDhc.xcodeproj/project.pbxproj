@@ -39,6 +39,7 @@
 		7B0EC78828CE624700D3E6FA /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EC78728CE624600D3E6FA /* CalenderView.swift */; };
 		7B20765728BE40C000A34C0D /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20765628BE40BF00A34C0D /* ReservationView.swift */; };
 		7B34813528BE554E00F49755 /* AllReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34813428BE554E00F49755 /* AllReviewView.swift */; };
+		7BB000A928DB627900DA2F10 /* ReservationPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB000A828DB627900DA2F10 /* ReservationPartyView.swift */; };
 		7BE7630328B533CE00BE4C85 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7630228B533CE00BE4C85 /* MyPageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		7B0EC78728CE624600D3E6FA /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 		7B20765628BE40BF00A34C0D /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
 		7B34813428BE554E00F49755 /* AllReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReviewView.swift; sourceTree = "<group>"; };
+		7BB000A828DB627900DA2F10 /* ReservationPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationPartyView.swift; sourceTree = "<group>"; };
 		7BE7630228B533CE00BE4C85 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,38 +112,39 @@
 		283B327428AE541C004232D6 /* swiftDhc */ = {
 			isa = PBXGroup;
 			children = (
-				28E1304928C32267007372BC /* ViewModel */,
-				28E1304628C3214A007372BC /* View */,
-				288B60F028D6DDA0004275CF /* GoogleService-Info.plist */,
-				28B584AA28BCF2090074D91F /* swiftDhcDebug.entitlements */,
-				283B327528AE541C004232D6 /* swiftDhcApp.swift */,
+				7B34813428BE554E00F49755 /* AllReviewView.swift */,
+				283B327928AE541E004232D6 /* Assets.xcassets */,
+				7B0EC78728CE624600D3E6FA /* CalenderView.swift */,
+				288B60F228D6E218004275CF /* CollectionView.swift */,
+				7B0D32AB28BF800100D9D5D1 /* CommunityDetailView.swift */,
+				282A05A028BB8E84004DF277 /* CommunityView.swift */,
 				283B327728AE541C004232D6 /* ContentView_bk.swift */,
+				28B584A828BCE7F50074D91F /* ContentView.swift */,
+				288B60F028D6DDA0004275CF /* GoogleService-Info.plist */,
+				2854D3E028B4F11D00E1EA40 /* IntroView.swift */,
+				2885FD0028BB672000A1CF59 /* LoginView.swift */,
 				28E0782A28B33EF00073B7B0 /* MainView.swift */,
 				7B0D32A928BF724D00D9D5D1 /* MyCommunityView.swift */,
-				7BE7630228B533CE00BE4C85 /* MyPageView.swift */,
 				287C358328C76CD1008404EE /* MyPageUpdateView.swift */,
-				288B60F428D6E249004275CF /* RecentReserveView.swift */,
-				2854D3E028B4F11D00E1EA40 /* IntroView.swift */,
-				7B0BC6F128BB78FE003503A0 /* ThemaView.swift */,
-				7B34813428BE554E00F49755 /* AllReviewView.swift */,
-				7B20765628BE40BF00A34C0D /* ReservationView.swift */,
-				7B0EC78728CE624600D3E6FA /* CalenderView.swift */,
-				7B0EC78528C786A900D3E6FA /* ReservationDetailView.swift */,
-				7B34813628BE5B6500F49755 /* Returns */,
-				28935EE628B9DEAF005B281C /* TestView.swift */,
-				288B60F228D6E218004275CF /* CollectionView.swift */,
-				28BD989E28BB3555002F86C8 /* SearchView.swift */,
-				2885FD0028BB672000A1CF59 /* LoginView.swift */,
-				282A05A028BB8E84004DF277 /* CommunityView.swift */,
-				7B0D32AB28BF800100D9D5D1 /* CommunityDetailView.swift */,
-				28577E5A28BCDB0A00636531 /* ReserveDetailView.swift */,
-				28B584A828BCE7F50074D91F /* ContentView.swift */,
-				283B327928AE541E004232D6 /* Assets.xcassets */,
+				7BE7630228B533CE00BE4C85 /* MyPageView.swift */,
 				283B327E28AE541E004232D6 /* Persistence.swift */,
-				283B328028AE541E004232D6 /* swiftDhc.xcdatamodeld */,
 				283B327B28AE541E004232D6 /* Preview Content */,
+				288B60F428D6E249004275CF /* RecentReserveView.swift */,
+				7B0EC78528C786A900D3E6FA /* ReservationDetailView.swift */,
+				7B20765628BE40BF00A34C0D /* ReservationView.swift */,
+				7BB000A828DB627900DA2F10 /* ReservationPartyView.swift */,
+				28577E5A28BCDB0A00636531 /* ReserveDetailView.swift */,
+				7B34813628BE5B6500F49755 /* Returns */,
 				2854D3DE28B4EB7800E1EA40 /* SampleData.swift */,
+				28BD989E28BB3555002F86C8 /* SearchView.swift */,
 				7B0BC6ED28BA8B5B003503A0 /* StarRating.swift */,
+				283B328028AE541E004232D6 /* swiftDhc.xcdatamodeld */,
+				283B327528AE541C004232D6 /* swiftDhcApp.swift */,
+				28B584AA28BCF2090074D91F /* swiftDhcDebug.entitlements */,
+				28935EE628B9DEAF005B281C /* TestView.swift */,
+				7B0BC6F128BB78FE003503A0 /* ThemaView.swift */,
+				28E1304628C3214A007372BC /* View */,
+				28E1304928C32267007372BC /* ViewModel */,
 			);
 			path = swiftDhc;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				7B0EC78628C786A900D3E6FA /* ReservationDetailView.swift in Sources */,
 				7BE7630328B533CE00BE4C85 /* MyPageView.swift in Sources */,
 				282A05A128BB8E84004DF277 /* CommunityView.swift in Sources */,
+				7BB000A928DB627900DA2F10 /* ReservationPartyView.swift in Sources */,
 				288B60F328D6E218004275CF /* CollectionView.swift in Sources */,
 				2885FD0128BB672000A1CF59 /* LoginView.swift in Sources */,
 				2854D3E128B4F11D00E1EA40 /* IntroView.swift in Sources */,

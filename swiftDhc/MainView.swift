@@ -13,6 +13,7 @@ import GoogleSignInSwift
 struct MainView: View {
     @AppStorage("log_status") var logStatus: Bool = false
     @AppStorage("user_name") var userName: String = ""
+    
 
     private var listOfCafe = CafeList
     @State var searchText = ""
@@ -23,7 +24,11 @@ struct MainView: View {
     @State var structOfThemaInfo = ThemaInfoData
 
     var CafeImageName = "CafeImage"
-    @State var isActive = true
+//    @State var isActive = true
+    
+    
+//    @State var isActive : Bool = false
+    
 
     var body: some View {
         NavigationView{
@@ -113,7 +118,10 @@ struct MainView: View {
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore, timeText: valueCafeInfo.cafeTime)
+                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore, timeText: valueCafeInfo.cafeTime
+//                                                                          , rootIsActive: self.$isActive
+                                                                         )
+//                                        , isActive: self.$isActive
                                         //.navigationBarBackButtonHidden(true)
                                     ){
                                         VStack{
@@ -164,7 +172,11 @@ struct MainView: View {
                             ForEach(structOfThemaInfo){
                                 valueThemaInfo in
                                 HStack{
-                                    NavigationLink(destination: ThemaView(themaImageText: valueThemaInfo.themaImageName, themaText: valueThemaInfo.themaName, cafeText:valueThemaInfo.cafeName, score: valueThemaInfo.themaScore, keywordText: valueThemaInfo.themaKeyword, genreText: valueThemaInfo.themaGenre, descText: valueThemaInfo.themaDescription)){
+                                    NavigationLink(destination: ThemaView(themaImageText: valueThemaInfo.themaImageName, themaText: valueThemaInfo.themaName, cafeText:valueThemaInfo.cafeName, score: valueThemaInfo.themaScore, keywordText: valueThemaInfo.themaKeyword, genreText: valueThemaInfo.themaGenre, descText: valueThemaInfo.themaDescription,        member: valueThemaInfo.themaMember
+//                                                                          , rootIsActive: self.$isActive
+                                                                         )
+//                                                   , isActive: self.$isActive
+                                    ){
                                         VStack{
                                             Image("\(valueThemaInfo.themaImageName)")
                                                 .resizable()
@@ -214,7 +226,11 @@ struct MainView: View {
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore)){
+                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore
+//                                                                          , rootIsActive: self.$isActive
+                                                                         )
+//                                                   , isActive: self.$isActive
+                                    ){
                                         VStack{
                                             Image("\(valueCafeInfo.cafeImage)")
                                                 .resizable()
@@ -259,10 +275,10 @@ struct MainView: View {
     }
     
 }
-
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-        
-    }
-}
+//
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//
+//    }
+//}

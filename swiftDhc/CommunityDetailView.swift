@@ -139,8 +139,8 @@ struct CommentListRow: View {
 }
 
 
-struct CommunityDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        CommunityDetailView()
-    }
-}
+//struct CommunityDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CommunityDetailView()
+//    }
+//}

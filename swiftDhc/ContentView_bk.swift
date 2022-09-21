@@ -123,11 +123,11 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct ContentView_bk_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView_bk().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
+//struct ContentView_bk_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView_bk().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//    }
+//}
 
 //#if canImport(UIKit)
 //extension View {

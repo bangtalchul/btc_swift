@@ -16,7 +16,9 @@ struct ReservationDetailView: View {
     var pickTime = ""
     
 //    var pickPeople = [""]
-    
+//    @Environment(\.presentationMode) var presentationMode2: Binding<PresentationMode>
+
+//    @Binding var shouldPopToRootView : Bool
     
     var body: some View {
         
@@ -90,7 +92,7 @@ struct ReservationDetailView: View {
                 }
                 
                 ZStack{
-                    NavigationLink(destination: MyPageView()
+                    NavigationLink(destination: MainView()
                                    , tag: 1, selection: self.$tagOfReservationDetail ) {
                           EmptyView()
                         }
@@ -101,7 +103,9 @@ struct ReservationDetailView: View {
                 
                 Button(action: {
                     self.tagOfReservationDetail = 1
-                    
+//                    self.shouldPopToRootView = false
+                    NavigationUtil.popToRootView()
+//                    self.presentationMode2.wrappedValue.dismiss()
                   }) {
                     HStack {
                         Image(systemName: "calendar")
@@ -123,8 +127,31 @@ struct ReservationDetailView: View {
     }
 }
 
-struct ReservationDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReservationDetailView()
+// RootView로 돌아가
+import UIKit
+
+struct NavigationUtil {
+    static func popToRootView() {
+        findNavigationController(viewController: UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController)?
+            .popToRootViewController(animated: true)
+    }
+static func findNavigationController(viewController: UIViewController?) -> UINavigationController? {
+        guard let viewController = viewController else {
+            return nil
+        }
+if let navigationController = viewController as? UINavigationController {
+            return navigationController
+        }
+for childViewController in viewController.children {
+            return findNavigationController(viewController: childViewController)
+        }
+return nil
     }
 }
+
+//
+//struct ReservationDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ReservationDetailView()
+//    }
+//}

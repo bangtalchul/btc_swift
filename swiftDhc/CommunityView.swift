@@ -130,8 +130,8 @@ struct PostListRow: View {
 }
 
 
-struct CommunityView_Previews: PreviewProvider {
-    static var previews: some View {
-        CommunityView()
-    }
-}
+//struct CommunityView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CommunityView()
+//    }
+//}

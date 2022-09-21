@@ -18,11 +18,13 @@ struct IntroView: View {
     var imageText = ""
     var locationText = ""
     var score = 0.0
-    var timeText = "" 
+    var timeText = ""
 //    var structOfCafeInfo = CafeInfo(cafeName: "", cafeLocation: "")
     
     @State var structOfThemaInfo = ThemaInfoData
     @State var valueThemaImage: String = ""
+    
+//    @Binding var rootIsActive : Bool
     
     var body: some View {
         
@@ -91,13 +93,16 @@ struct IntroView: View {
                         NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName, themaText: $valueThemaInfo.wrappedValue.themaName, cafeText:$valueThemaInfo.wrappedValue.cafeName, score: $valueThemaInfo.wrappedValue.themaScore,
                             keywordText: $valueThemaInfo.wrappedValue.themaKeyword,
                             genreText: $valueThemaInfo.wrappedValue.themaGenre,
-                            descText: $valueThemaInfo.wrappedValue.themaDescription
+                            descText: $valueThemaInfo.wrappedValue.themaDescription,
+                             member: $valueThemaInfo.wrappedValue.themaMember
+//                                                              , rootIsActive: self.$rootIsActive
                             )//.navigationBarBackButtonHidden(true)
                         )
                         {
                             ThemaListRow(themaInfo: $valueThemaInfo)
                                 .foregroundColor(.black)
                         }
+                        .isDetailLink(false)
                     }
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                     .edgesIgnoringSafeArea(.all)
@@ -169,8 +174,8 @@ struct ThemaListRow: View {
     }
 }
 
-struct IntroView_Previews: PreviewProvider {
-    static var previews: some View {
-        IntroView()
-    }
-}
+//struct IntroView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        IntroView()
+//    }
+//}

@@ -30,6 +30,7 @@ public struct ThemaInfo: Identifiable {
     var themaDescription: String
     var themaScore: Double
     var themaImageName: String
+    var themaMember: Int
 }
 
 public struct UserInfo: Identifiable {
@@ -135,9 +136,9 @@ public var CafeInfoData = [CafeInfo(cafeName: "숨바꼭질 1호점", cafeLocati
                            , CafeInfo(cafeName: "비트포비아던전 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 4.7, cafeImage: "CafeImageTest", cafeTime: "10:00 - 22:00")
                              ]
 
-public var ThemaInfoData = [ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "무고", themaKeyword: "활동성 낮음, 장치비율 보통, 2인용", themaGenre: "공포", themaDescription: "무서운 테마 어쩌구 저쩌구", themaScore: 3.5, themaImageName: "ThemaImageTest")
-                            , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "테스트2", themaKeyword: "짱어려움", themaGenre: "드라마", themaDescription: "테스트임ㅁ미다~", themaScore: 4.5, themaImageName: "ThemaImageTest2")
-                            , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "테스트3", themaKeyword: "짱쉬움", themaGenre: "추리", themaDescription: "테스트~~~", themaScore: 3.8, themaImageName: "ThemaImageTest3")
+public var ThemaInfoData = [ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "무고", themaKeyword: "활동성 낮음, 장치비율 보통", themaGenre: "공포", themaDescription: "무서운 테마 어쩌구 저쩌구", themaScore: 3.5, themaImageName: "ThemaImageTest", themaMember: 5)
+                            , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "테스트2", themaKeyword: "짱어려움", themaGenre: "드라마", themaDescription: "테스트임ㅁ미다~", themaScore: 4.5, themaImageName: "ThemaImageTest2", themaMember: 3)
+                            , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "테스트3", themaKeyword: "짱쉬움", themaGenre: "추리", themaDescription: "테스트~~~", themaScore: 3.8, themaImageName: "ThemaImageTest3", themaMember: 4)
                             ]
 
 public var UserInfoData = [UserInfo(name: "박상혁", nickname: "상상쓰"), UserInfo(name: "손수현", nickname: "부산쌍칼"), UserInfo(name: "김정희", nickname: "정희입니다"), UserInfo(name: "김수현", nickname: "피자맥주어쩌고"), UserInfo(name: "문영화", nickname: "문무비"), UserInfo(name: "윤수빈", nickname: "bnk귀요미")]
@@ -166,10 +167,14 @@ public var CommentInfoData = [CommentInfo(userName: UserInfoData[1].nickname, co
                               , CommentInfo(userName: UserInfoData[4].nickname, commentText: "서면 어디로 갈건뎅?", commentTime: "2022-08-31 19:25")]
 public var cnt = CommentInfoData.count
 
-public var ReserveInfoData = [ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-13", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 100)
-                          , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-17", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 101)
-                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-21", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30", "19:00"], reserveCode: 102)]
+public var ReserveInfoData = [ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-23", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 100)
+                          , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-25", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 101)
+                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-26", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30", "19:00"], reserveCode: 102)
+                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-28", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 103)
+                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-30", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 104)]
 
 public var ReserveStateDate = [ReserveState(reserveCode: 100, reserveST: [true, true, true, true, false, false])
                                , ReserveState(reserveCode: 101, reserveST: [true, true, true, true, true, false, true])
-                               , ReserveState(reserveCode: 102, reserveST: [false, true, true, true, false, false, true])]
+                               , ReserveState(reserveCode: 102, reserveST: [false, true, true, true, false, false, true])
+                               , ReserveState(reserveCode: 103, reserveST: [true, true, true, true, false, false])
+                               , ReserveState(reserveCode: 104, reserveST: [true, true, true, true, true, false, true])]

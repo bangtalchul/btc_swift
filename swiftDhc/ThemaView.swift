@@ -19,10 +19,16 @@ struct ThemaView: View {
     var keywordText = ""
     var genreText = ""
     var descText = ""
+    
+    var member = 0
+    
 //    var imageText = ""
     
     @State var tagOfReserv:Int? = nil
     @State var structOfReview = ReviewData
+    
+//    @Binding var rootIsActive : Bool
+    
     
     var body: some View {
         ScrollView {
@@ -52,6 +58,9 @@ struct ThemaView: View {
                         Text(genreText)
                         Text(" | ")
                         Text(keywordText)
+                        Text(" | ")
+                        Text(String(format: "%0d", member))
+                        Text("인 추천")
                     }
                     .foregroundColor(.gray)
                     .font(.callout)
@@ -77,9 +86,12 @@ struct ThemaView: View {
             
             // 예약 버튼
             ZStack{
-                    NavigationLink(destination: ReservationView(cafeText: cafeText, themeText: themaText), tag: 1, selection: self.$tagOfReserv ) {
+                    NavigationLink(destination: ReservationView(cafeText: cafeText, themeText: themaText, memberCnt: member
+//                                                                , rootIsActive: self.$rootIsActive
+                                                               ), tag: 1, selection: self.$tagOfReserv ) {
                       EmptyView()
                     }
+                    .isDetailLink(false)
             }
                 
             Button(action: {
@@ -137,10 +149,12 @@ struct ThemaView: View {
             }
             
             
-            Text("Thema View")
-                .font(.title)
-            Spacer()
+//            Text("Thema View")
+//                .font(.title)
+//            Spacer()
         }
+        
+        .padding(.bottom, 2)
     }
 }
 
@@ -202,8 +216,8 @@ struct ReviewListRow: View {
 }
 
 
-struct ThemaView_Previews: PreviewProvider {
-    static var previews: some View {
-        ThemaView()
-    }
-}
+//struct ThemaView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThemaView()
+//    }
+//}
