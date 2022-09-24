@@ -118,7 +118,7 @@ struct MainView: View {
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore, timeText: valueCafeInfo.cafeTime
+                                    NavigationLink(destination: IntroView(cafeName:valueCafeInfo.cafeName, titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore, timeText: valueCafeInfo.cafeTime
 //                                                                          , rootIsActive: self.$isActive
                                                                          )
 //                                        , isActive: self.$isActive
@@ -226,7 +226,7 @@ struct MainView: View {
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore
+                                    NavigationLink(destination: IntroView(cafeName:valueCafeInfo.cafeName, titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore
 //                                                                          , rootIsActive: self.$isActive
                                                                          )
 //                                                   , isActive: self.$isActive
@@ -252,6 +252,7 @@ struct MainView: View {
                 }
             }
         }
+        .accentColor(Color(red: 85/255, green: 32/255, blue: 132/255))
         .toolbar{
             ToolbarItem{
                 Button("logout"){

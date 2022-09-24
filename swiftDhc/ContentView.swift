@@ -99,6 +99,7 @@ struct ContentView: View {
         
                 }
                 .font(.headline)
+                .accentColor(Color(red: 85/255, green: 32/255, blue: 132/255))
     }
     
     private func addItem() {

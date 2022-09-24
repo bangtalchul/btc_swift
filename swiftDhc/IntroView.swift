@@ -12,7 +12,7 @@ struct IntroView: View {
     //@Binding var searchText2: String
     
     var cafeImageName = "CafeImageTest"
-    var cafeName: String = "비밀의 화원"
+    var cafeName: String = ""
     //220817 수현추가
     var titleText = ""
     var imageText = ""
@@ -87,26 +87,60 @@ struct IntroView: View {
     //            Spacer()
                 
                 // 테마 summary
+//                ForEach($structOfThemaInfo){
+//                    $valueThemaInfo in
+//                    VStack{
+//                        NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName, themaText: $valueThemaInfo.wrappedValue.themaName, cafeText:$valueThemaInfo.wrappedValue.cafeName, score: $valueThemaInfo.wrappedValue.themaScore,
+//                            keywordText: $valueThemaInfo.wrappedValue.themaKeyword,
+//                            genreText: $valueThemaInfo.wrappedValue.themaGenre,
+//                            descText: $valueThemaInfo.wrappedValue.themaDescription,
+//                             member: $valueThemaInfo.wrappedValue.themaMember
+////                                                              , rootIsActive: self.$rootIsActive
+//                            )//.navigationBarBackButtonHidden(true)
+//                        )
+//                        {
+//                            ThemaListRow(themaInfo: $valueThemaInfo)
+//                                .foregroundColor(.black)
+//                        }
+//                        .isDetailLink(false)
+//                    }
+//                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+//                    .edgesIgnoringSafeArea(.all)
+//                }
+                
+                // ThemaView Test!!!
+                
+                Divider()
+                
                 ForEach($structOfThemaInfo){
                     $valueThemaInfo in
-                    VStack{
-                        NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName, themaText: $valueThemaInfo.wrappedValue.themaName, cafeText:$valueThemaInfo.wrappedValue.cafeName, score: $valueThemaInfo.wrappedValue.themaScore,
-                            keywordText: $valueThemaInfo.wrappedValue.themaKeyword,
-                            genreText: $valueThemaInfo.wrappedValue.themaGenre,
-                            descText: $valueThemaInfo.wrappedValue.themaDescription,
-                             member: $valueThemaInfo.wrappedValue.themaMember
-//                                                              , rootIsActive: self.$rootIsActive
-                            )//.navigationBarBackButtonHidden(true)
-                        )
-                        {
-                            ThemaListRow(themaInfo: $valueThemaInfo)
-                                .foregroundColor(.black)
+                    
+                    Group{
+                        if getThema(cafeName: cafeName, themaCafeName:  $valueThemaInfo.wrappedValue.cafeName) {
+                            VStack {
+                                NavigationLink(destination: ThemaView(themaImageText: $valueThemaInfo.wrappedValue.themaImageName
+                                    , themaText: $valueThemaInfo.wrappedValue.themaName
+                                    , cafeText:$valueThemaInfo.wrappedValue.cafeName
+                                    , score: $valueThemaInfo.wrappedValue.themaScore
+                                    , keywordText: $valueThemaInfo.wrappedValue.themaKeyword
+                                    , genreText: $valueThemaInfo.wrappedValue.themaGenre
+                                    , descText: $valueThemaInfo.wrappedValue.themaDescription
+                                    , member: $valueThemaInfo.wrappedValue.themaMember
+                                    )
+                                )
+                                {
+                                    ThemaListRow(themaInfo: $valueThemaInfo)
+                                        .foregroundColor(.black)
+                                }
+                                .isDetailLink(false)
+                            }
+                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                            .edgesIgnoringSafeArea(.all)
                         }
-                        .isDetailLink(false)
+                        
                     }
-                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                    .edgesIgnoringSafeArea(.all)
                 }
+                
                 
                 
     //            List(structOfThemaInfo.indices) { themas in
@@ -118,10 +152,12 @@ struct IntroView: View {
                     
             }
         }
+        .navigationBarTitle(Text(verbatim: "카페 상세"), displayMode: .inline)
         .padding()
-        
+        .accentColor(Color(red: 85/255, green: 32/255, blue: 132/255))
         
     }
+    
 }
 
 struct ThemaSummaryView: View {
@@ -136,10 +172,10 @@ struct ThemaSummaryView: View {
                 Spacer().frame(width:20)
                 VStack(alignment: .leading, spacing: 4) {
                     Text(themaInfo.themaName)
-                        .font(.title)
+                        .font(.title2)
                         .fixedSize(horizontal: false, vertical: true)
                     Text(themaInfo.cafeName)
-                        .font(.caption)
+                        .font(.footnote)
                     Spacer().frame(height:4)
                     HStack {
                         StarRating(rating: .constant(themaInfo.themaScore), maxRating: 5)
@@ -172,6 +208,16 @@ struct ThemaListRow: View {
         .fixedSize(horizontal: false, vertical: true)
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
     }
+}
+
+
+// get thema function
+func getThema(cafeName: String, themaCafeName: String) -> Bool {
+    
+    if cafeName == themaCafeName {
+        return true
+    }
+    return false
 }
 
 //struct IntroView_Previews: PreviewProvider {

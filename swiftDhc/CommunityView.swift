@@ -100,7 +100,7 @@ struct PostSummaryView: View {
                     Image(systemName: "bubble.right")
                         .foregroundColor(Color(red: 85/255, green: 32/255, blue: 132/255))
                         .font(.caption)
-                    Text(String(format: "%0.f", cnt))
+                    Text(String(format: "%0d", cnt))
                         .foregroundColor(Color(red: 85/255, green: 32/255, blue: 132/255))
                         .font(.caption)
                 }

@@ -231,9 +231,7 @@ struct ReservationView: View {
 func getTime(date: String, cafeName: String, themaName: String, reserve: ReserveInfo) -> Bool {
     if date == reserve.reserveDate && cafeName == reserve.cafeName && themaName == reserve.themeName {
         return true
-    } else {
-        return false
-    }
+    } 
     return false
 }
 

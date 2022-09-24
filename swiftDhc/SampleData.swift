@@ -125,20 +125,22 @@ public var CafeList = [
 //                           , CafeInfo(cafeName: "비트포비아던전 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 4.7)
 //                             ]
 
-public var CafeInfoData = [CafeInfo(cafeName: "숨바꼭질 1호점", cafeLocation: "부산광역시 사하구", cafeScore: 4.3, cafeImage: "CafeImageTest", cafeTime: "09:00 - 23:00")
-                           , CafeInfo(cafeName: "숨바꼭질 2호점", cafeLocation: "부산광역시 강서구", cafeScore: 5.0, cafeImage: "CafeImage", cafeTime: "09:00 - 20:00")
-                           , CafeInfo(cafeName: "비밀의화원 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 1.8, cafeImage: "CafeImageTest", cafeTime: "09:00 - 21:00")
-                           , CafeInfo(cafeName: "비트포비아 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 2.4, cafeImage: "CafeImage", cafeTime: "09:00 - 22:30")
-                           , CafeInfo(cafeName: "룸즈에이 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 3.1, cafeImage: "CafeImageTest", cafeTime: "09:00 - 23:00")
-                           , CafeInfo(cafeName: "지구별방탈출 대구점", cafeLocation: "대구광역시", cafeScore: 4.6, cafeImage: "CafeImage", cafeTime: "09:00 - 23:00")
-                           , CafeInfo(cafeName: "지구별방탈출 홍대점", cafeLocation: "서울특별시 어딘가", cafeScore: 5.0, cafeImage: "CafeImageTest", cafeTime: "10:00 - 23:00")
-                           , CafeInfo(cafeName: "비밀의화원 시네마틱혜화점", cafeLocation: "서울특별시 어딘가2", cafeScore: 3.0, cafeImage: "CafeImage", cafeTime: "09:00 - 23:00")
-                           , CafeInfo(cafeName: "비트포비아던전 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 4.7, cafeImage: "CafeImageTest", cafeTime: "10:00 - 22:00")
+public var CafeInfoData = [CafeInfo(cafeName: "숨바꼭질 1호점", cafeLocation: "부산광역시 사하구", cafeScore: 4.3, cafeImage: "Store1", cafeTime: "09:00 - 23:00")
+                           , CafeInfo(cafeName: "숨바꼭질 2호점", cafeLocation: "부산광역시 강서구", cafeScore: 5.0, cafeImage: "Store2", cafeTime: "09:00 - 20:00")
+                           , CafeInfo(cafeName: "비밀의화원 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 1.8, cafeImage: "Store3", cafeTime: "09:00 - 21:00")
+                           , CafeInfo(cafeName: "비트포비아 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 2.4, cafeImage: "Store4", cafeTime: "09:00 - 22:30")
+                           , CafeInfo(cafeName: "룸즈에이 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 3.1, cafeImage: "Store5", cafeTime: "09:00 - 23:00")
+                           , CafeInfo(cafeName: "지구별방탈출 대구점", cafeLocation: "대구광역시", cafeScore: 4.6, cafeImage: "Store6", cafeTime: "09:00 - 23:00")
+                           , CafeInfo(cafeName: "지구별방탈출 홍대점", cafeLocation: "서울특별시 어딘가", cafeScore: 5.0, cafeImage: "Store7", cafeTime: "10:00 - 23:00")
+                           , CafeInfo(cafeName: "비밀의화원 시네마틱혜화점", cafeLocation: "서울특별시 어딘가2", cafeScore: 3.0, cafeImage: "Store1", cafeTime: "09:00 - 23:00")
+                           , CafeInfo(cafeName: "비트포비아던전 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 4.7, cafeImage: "Store2", cafeTime: "10:00 - 22:00")
                              ]
 
-public var ThemaInfoData = [ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "무고", themaKeyword: "활동성 낮음, 장치비율 보통", themaGenre: "공포", themaDescription: "무서운 테마 어쩌구 저쩌구", themaScore: 3.5, themaImageName: "ThemaImageTest", themaMember: 5)
-                            , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "테스트2", themaKeyword: "짱어려움", themaGenre: "드라마", themaDescription: "테스트임ㅁ미다~", themaScore: 4.5, themaImageName: "ThemaImageTest2", themaMember: 3)
-                            , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "테스트3", themaKeyword: "짱쉬움", themaGenre: "추리", themaDescription: "테스트~~~", themaScore: 3.8, themaImageName: "ThemaImageTest3", themaMember: 4)
+public var ThemaInfoData = [ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "저주받은 집", themaKeyword: "활동성 낮음, 장치비율 보통", themaGenre: "공포", themaDescription: "무서운 테마 어쩌구 저쩌구", themaScore: 3.5, themaImageName: "Thema1", themaMember: 5)
+                            , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "괴도 루키", themaKeyword: "짱어려움", themaGenre: "드라마", themaDescription: "테스트임ㅁ미다~", themaScore: 4.5, themaImageName: "Thema2", themaMember: 3)
+                            , ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "반 고흐의 방", themaKeyword: "짱쉬움", themaGenre: "추리", themaDescription: "테스트~~~", themaScore: 3.8, themaImageName: "Thema3", themaMember: 4)
+                            , ThemaInfo(cafeName: "비트포비아 서면점", themaName: "스토커", themaKeyword: "쏘쏘함", themaGenre: "감동실화", themaDescription: "테스트~!!!~~", themaScore: 3.3, themaImageName: "Thema4", themaMember: 5)
+                            , ThemaInfo(cafeName: "숨바꼭질 1호점", themaName: "웨딩크루즈 살인사건", themaKeyword: "매우 어려움", themaGenre: "추리", themaDescription: "테스트 용요용~~", themaScore: 4.9, themaImageName: "Thema5", themaMember: 5)
                             ]
 
 public var UserInfoData = [UserInfo(name: "박상혁", nickname: "상상쓰"), UserInfo(name: "손수현", nickname: "부산쌍칼"), UserInfo(name: "김정희", nickname: "정희입니다"), UserInfo(name: "김수현", nickname: "피자맥주어쩌고"), UserInfo(name: "문영화", nickname: "문무비"), UserInfo(name: "윤수빈", nickname: "bnk귀요미")]
