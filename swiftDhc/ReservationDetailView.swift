@@ -24,72 +24,99 @@ struct ReservationDetailView: View {
         
         
         VStack{
-            Text("한번 더 확인해 주세요.")
-                .font(.title)
             
             
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("카페 이름 : ")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                        .frame(width: 100)
-                    Text(cafeText)
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                }
+            
+            VStack{
                 
-                HStack {
-                    Text("테마    : ")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                        .frame(width: 100)
-                    Text(themeText)
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                }
+                Image(systemName: "checkmark.circle.fill")
+                    .font(.system(size: 60))
+                    .foregroundColor(Color(red: 85/255, green: 32/255, blue: 132/255))
+                    .padding(.top, 30)
                 
+                Text("예약이 완료되었습니다.")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.top, 10)
+                
+            }
+            .padding()
+            
+            VStack{
+            
                 HStack {
-                    Text("날짜    : ")
-                        .font(.title2)
-                        .foregroundColor(.gray)
-                        .frame(width: 100)
                     
+                    Text("카페 이름 : ")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                        .frame(width: 100)
+                    Spacer()
+                    Text(cafeText)
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                }
+                .padding()
+                
+                Divider()
+                
+                HStack {
+                    Text("테마 : ")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                        .frame(width: 100)
+                    Spacer()
+                    Text(themeText)
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                }
+                .padding([.top, .trailing])
+                
+                HStack {
+                    Text("날짜 : ")
+                        .font(.headline)
+                        .foregroundColor(.gray)
+                        .frame(width: 100)
+                    Spacer()
                     Text(dateTimeSubString(str:pickDate, from:6, to:2))
-                        .font(.title2)
+                        .font(.headline)
                         .fontWeight(.semibold)
                     +
                     Text("월 ")
-                        .font(.title2)
+                        .font(.headline)
                         .fontWeight(.semibold)
                     +
                     Text(dateTimeSubString(str:pickDate, from:9, to:2))
-                        .font(.title2)
+                        .font(.headline)
                         .fontWeight(.semibold)
                     +
-                    Text("일 ")
-                        .font(.title2)
+                    Text("일")
+                        .font(.headline)
                         .fontWeight(.semibold)
                 }
+                .padding(.top, 3)
+                .padding([.trailing])
                 
                 HStack {
-                    Text("시간    : ")
-                        .font(.title2)
+                    Text("시간 : ")
+                        .font(.headline)
                         .foregroundColor(.gray)
                         .frame(width: 100)
-                    
+                    Spacer()
                     Text(dateTimeSubString(str:pickTime, from:1, to:2))
-                        .font(.title2)
+                        .font(.headline)
                         .fontWeight(.semibold)
                     +
                     Text("시 ")
-                        .font(.title2)
+                        .font(.headline)
                         .fontWeight(.semibold)
                     +
                     Text(dateTimeSubString(str:pickTime, from:4, to:2))
-                        .font(.title2)
+                        .font(.headline)
                         .fontWeight(.semibold)
                 }
+                .padding(.top, 3)
+                .padding([.trailing])
+                
                 
                 ZStack{
                     NavigationLink(destination: MainView()
@@ -108,9 +135,10 @@ struct ReservationDetailView: View {
 //                    self.presentationMode2.wrappedValue.dismiss()
                   }) {
                     HStack {
-                        Image(systemName: "calendar")
-                            .font(.title)
-                        Text("예약확인")
+//                        Image(systemName: "calendar")
+//                            .font(.title)
+//                        Text("예약확인")
+                        Text("확   인")
                             .fontWeight(.semibold)
                             .font(.title)
                     }
@@ -119,11 +147,12 @@ struct ReservationDetailView: View {
                     .cornerRadius(40)
                 }
                 .buttonStyle(MyButtonStyle())
-                .padding()
+//                .padding()
             }
+            .padding()
 //            Text(cafeText)
         }
-        .padding()
+//        .padding()
     }
 }
 
