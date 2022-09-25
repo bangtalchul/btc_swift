@@ -108,7 +108,7 @@ struct ThemaView: View {
                 .padding()
                 .foregroundColor(.white)
                 .background(Color(red: 85/255, green: 32/255, blue: 132/255))
-                .cornerRadius(40)
+                .cornerRadius(20)
             }
             .padding()
             

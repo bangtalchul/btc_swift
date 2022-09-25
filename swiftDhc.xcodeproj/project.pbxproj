@@ -19,7 +19,6 @@
 		28577E5B28BCDB0A00636531 /* ReserveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28577E5A28BCDB0A00636531 /* ReserveDetailView.swift */; };
 		287C358428C76CD1008404EE /* MyPageUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C358328C76CD1008404EE /* MyPageUpdateView.swift */; };
 		2885FD0128BB672000A1CF59 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885FD0028BB672000A1CF59 /* LoginView.swift */; };
-		288B60F128D6DDA0004275CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 288B60F028D6DDA0004275CF /* GoogleService-Info.plist */; };
 		288B60F328D6E218004275CF /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B60F228D6E218004275CF /* CollectionView.swift */; };
 		288B60F528D6E249004275CF /* RecentReserveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B60F428D6E249004275CF /* RecentReserveView.swift */; };
 		28935EE728B9DEAF005B281C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28935EE628B9DEAF005B281C /* TestView.swift */; };
@@ -38,6 +37,7 @@
 		7B0EC78628C786A900D3E6FA /* ReservationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EC78528C786A900D3E6FA /* ReservationDetailView.swift */; };
 		7B0EC78828CE624700D3E6FA /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0EC78728CE624600D3E6FA /* CalenderView.swift */; };
 		7B20765728BE40C000A34C0D /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20765628BE40BF00A34C0D /* ReservationView.swift */; };
+		7B29C78928E047C000E13D4F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B29C78828E047C000E13D4F /* GoogleService-Info.plist */; };
 		7B34813528BE554E00F49755 /* AllReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34813428BE554E00F49755 /* AllReviewView.swift */; };
 		7BB000A928DB627900DA2F10 /* ReservationPartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB000A828DB627900DA2F10 /* ReservationPartyView.swift */; };
 		7BE7630328B533CE00BE4C85 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7630228B533CE00BE4C85 /* MyPageView.swift */; };
@@ -57,7 +57,6 @@
 		28577E5A28BCDB0A00636531 /* ReserveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveDetailView.swift; sourceTree = "<group>"; };
 		287C358328C76CD1008404EE /* MyPageUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUpdateView.swift; sourceTree = "<group>"; };
 		2885FD0028BB672000A1CF59 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		288B60F028D6DDA0004275CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		288B60F228D6E218004275CF /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		288B60F428D6E249004275CF /* RecentReserveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentReserveView.swift; sourceTree = "<group>"; };
 		28935EE628B9DEAF005B281C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		7B0EC78528C786A900D3E6FA /* ReservationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailView.swift; sourceTree = "<group>"; };
 		7B0EC78728CE624600D3E6FA /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 		7B20765628BE40BF00A34C0D /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+		7B29C78828E047C000E13D4F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Users/goyang/Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B34813428BE554E00F49755 /* AllReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReviewView.swift; sourceTree = "<group>"; };
 		7BB000A828DB627900DA2F10 /* ReservationPartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationPartyView.swift; sourceTree = "<group>"; };
 		7BE7630228B533CE00BE4C85 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				282A05A028BB8E84004DF277 /* CommunityView.swift */,
 				283B327728AE541C004232D6 /* ContentView_bk.swift */,
 				28B584A828BCE7F50074D91F /* ContentView.swift */,
-				288B60F028D6DDA0004275CF /* GoogleService-Info.plist */,
+				7B29C78828E047C000E13D4F /* GoogleService-Info.plist */,
 				2854D3E028B4F11D00E1EA40 /* IntroView.swift */,
 				2885FD0028BB672000A1CF59 /* LoginView.swift */,
 				28E0782A28B33EF00073B7B0 /* MainView.swift */,
@@ -249,7 +249,7 @@
 			files = (
 				283B327D28AE541E004232D6 /* Preview Assets.xcassets in Resources */,
 				283B327A28AE541E004232D6 /* Assets.xcassets in Resources */,
-				288B60F128D6DDA0004275CF /* GoogleService-Info.plist in Resources */,
+				7B29C78928E047C000E13D4F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = swiftDhc/swiftDhcDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -444,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftDhc/Preview Content\"";

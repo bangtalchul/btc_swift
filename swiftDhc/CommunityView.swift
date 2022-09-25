@@ -27,6 +27,10 @@ struct CommunityView: View {
                             .font(.title)
                             .fontWeight(.bold)
                         Spacer()
+                        
+                        Image(systemName: "square.and.pencil")
+                            .foregroundColor(Color(red: 85/255, green: 32/255, blue: 132/255))
+                        
                     }
                     .padding(EdgeInsets(top:0, leading: 10, bottom:0, trailing: 10))
                     
