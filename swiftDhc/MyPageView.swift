@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
+import GoogleSignIn
+import GoogleSignInSwift
 
 struct MyPageView: View {
     var UserImageName = "UserImageTest"
 //    var UserName: String = "핑구"
     var UserIntroduce: String = "즐거운 방탈출!"
     @AppStorage("user_name") var userName: String = ""
+    @AppStorage("log_status") var logStatus: Bool = false
+    
     @State var structOfUserInfo = UserInfoData//CafeInfo(cafeName: "", cafeLocation: "")
     
     var body: some View {
@@ -51,8 +56,23 @@ struct MyPageView: View {
                     }
                 }
                 
+                
+                // Button Test
+                
+                Button("로그아웃"){
+                    try? Auth.auth().signOut()
+                    GIDSignIn.sharedInstance.signOut()
+                    withAnimation(.easeInOut){
+                        logStatus = false
+                    }
+                }
+                .foregroundColor(.red)
+                .padding()
+                
+                
             }
         }
+//        .navigationBarTitle(Text(verbatim: ""), displayMode: .inline)
     }
     
 }

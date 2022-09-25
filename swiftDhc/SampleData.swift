@@ -169,11 +169,11 @@ public var CommentInfoData = [CommentInfo(userName: UserInfoData[1].nickname, co
                               , CommentInfo(userName: UserInfoData[4].nickname, commentText: "서면 어디로 갈건뎅?", commentTime: "2022-08-31 19:25")]
 public var cnt = CommentInfoData.count
 
-public var ReserveInfoData = [ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-23", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 100)
-                          , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-25", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 101)
-                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-26", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30", "19:00"], reserveCode: 102)
-                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-28", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 103)
-                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무고", reserveDate: "2022-09-30", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 104)]
+public var ReserveInfoData = [ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "저주받은 집", reserveDate: "2022-09-23", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 100)
+                          , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "저주받은 집", reserveDate: "2022-09-25", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 101)
+                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "저주받은 집", reserveDate: "2022-09-26", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30", "19:00"], reserveCode: 102)
+                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "저주받은 집", reserveDate: "2022-09-28", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 103)
+                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무저주받은 집", reserveDate: "2022-09-30", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 104)]
 
 public var ReserveStateDate = [ReserveState(reserveCode: 100, reserveST: [true, true, true, true, false, false])
                                , ReserveState(reserveCode: 101, reserveST: [true, true, true, true, true, false, true])

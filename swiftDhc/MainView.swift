@@ -43,15 +43,16 @@ struct MainView: View {
                     Spacer()
                     Spacer()
                     
-                        Button("로그아웃"){
-                            try? Auth.auth().signOut()
-                            GIDSignIn.sharedInstance.signOut()
-                            withAnimation(.easeInOut){
-                                logStatus = false
-                            }
-                        }
-                        .foregroundColor(.black)
-                        .padding()
+//                        Button("로그아웃"){
+//                            try? Auth.auth().signOut()
+//                            GIDSignIn.sharedInstance.signOut()
+//                            withAnimation(.easeInOut){
+//                                logStatus = false
+//                            }
+//                        }
+//                        .foregroundColor(.black)
+//                        .padding()
+                        
                     }
                     
                     //---------------------------

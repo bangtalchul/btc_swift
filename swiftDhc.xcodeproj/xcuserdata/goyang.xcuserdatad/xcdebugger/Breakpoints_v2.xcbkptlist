@@ -3,4 +3,22 @@
    uuid = "80598767-D06B-43C4-95FF-9598D5C388CD"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C39B5771-67A6-4AD7-A0D7-ED49A1AD99BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftDhc/ReservationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
+            landmarkName = "dateTimeSubString(str:from:to:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
