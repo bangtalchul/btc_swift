@@ -18,7 +18,6 @@
 		2854D3E128B4F11D00E1EA40 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854D3E028B4F11D00E1EA40 /* IntroView.swift */; };
 		28577E5B28BCDB0A00636531 /* ReserveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28577E5A28BCDB0A00636531 /* ReserveDetailView.swift */; };
 		287C358428C76CD1008404EE /* MyPageUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C358328C76CD1008404EE /* MyPageUpdateView.swift */; };
-		2885FD0128BB672000A1CF59 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885FD0028BB672000A1CF59 /* LoginView.swift */; };
 		288B60F328D6E218004275CF /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B60F228D6E218004275CF /* CollectionView.swift */; };
 		288B60F528D6E249004275CF /* RecentReserveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B60F428D6E249004275CF /* RecentReserveView.swift */; };
 		28935EE728B9DEAF005B281C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28935EE628B9DEAF005B281C /* TestView.swift */; };
@@ -56,7 +55,6 @@
 		2854D3E028B4F11D00E1EA40 /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		28577E5A28BCDB0A00636531 /* ReserveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveDetailView.swift; sourceTree = "<group>"; };
 		287C358328C76CD1008404EE /* MyPageUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageUpdateView.swift; sourceTree = "<group>"; };
-		2885FD0028BB672000A1CF59 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		288B60F228D6E218004275CF /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		288B60F428D6E249004275CF /* RecentReserveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentReserveView.swift; sourceTree = "<group>"; };
 		28935EE628B9DEAF005B281C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				28B584A828BCE7F50074D91F /* ContentView.swift */,
 				7B29C78828E047C000E13D4F /* GoogleService-Info.plist */,
 				2854D3E028B4F11D00E1EA40 /* IntroView.swift */,
-				2885FD0028BB672000A1CF59 /* LoginView.swift */,
 				28E0782A28B33EF00073B7B0 /* MainView.swift */,
 				7B0D32A928BF724D00D9D5D1 /* MyCommunityView.swift */,
 				287C358328C76CD1008404EE /* MyPageUpdateView.swift */,
@@ -280,7 +277,6 @@
 				282A05A128BB8E84004DF277 /* CommunityView.swift in Sources */,
 				7BB000A928DB627900DA2F10 /* ReservationPartyView.swift in Sources */,
 				288B60F328D6E218004275CF /* CollectionView.swift in Sources */,
-				2885FD0128BB672000A1CF59 /* LoginView.swift in Sources */,
 				2854D3E128B4F11D00E1EA40 /* IntroView.swift in Sources */,
 				2854D3DF28B4EB7800E1EA40 /* SampleData.swift in Sources */,
 				287C358428C76CD1008404EE /* MyPageUpdateView.swift in Sources */,

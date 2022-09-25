@@ -42,7 +42,7 @@ struct Login: View {
 
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        Login()
     }
 }
 
