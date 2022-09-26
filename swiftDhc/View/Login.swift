@@ -14,13 +14,9 @@ struct Login: View {
     @StateObject var loginModel: LoginViewModel = .init()
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
-            VStack(alignment: .leading, spacing: 15){
-                Image(systemName: "triangle")
-                Text("hello world!")
-                    .font(.title)
-            }
-            .padding(.leading, 60)
+        VStack{
+            Image("dhcLogo")
+            
             if let clientID = FirebaseApp.app()?.options.clientID{
                 GoogleSignInButton{
                     GIDSignIn.sharedInstance.signIn(with: .init(clientID: clientID), presenting: UIApplication.shared.rootController()){user, error in
@@ -36,10 +32,38 @@ struct Login: View {
                     }
                 }
             }
+        HStack(spacing: 8){
+            HStack{
+                Image("google")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 25, height: 25)
+                    .frame(height: 45)
+                
+                Text("Google Sign In")
+                    .font(.callout)
+                    .lineLimit(1)
+                
+            }
+            .foregroundColor(.white)
+            .padding(.horizontal, 15)
+            .background{
+                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    .fill(.black)
+            }
+            .overlay{
+                
+                    
+            }
+            .frame(height: 55)
+            .blendMode(.overlay)
         }
+        .clipped()
+
     }
 }
-
+    
+}
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
         Login()
