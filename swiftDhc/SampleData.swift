@@ -18,6 +18,7 @@ public struct CafeInfo: Identifiable {
     var cafeScore: Double
     var cafeImage: String
     var cafeTime: String
+    var recomCafe: String
 }
 
 // 220828 정희 : 테마 정보 구조체 정의
@@ -125,15 +126,15 @@ public var CafeList = [
 //                           , CafeInfo(cafeName: "비트포비아던전 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 4.7)
 //                             ]
 
-public var CafeInfoData = [CafeInfo(cafeName: "숨바꼭질 1호점", cafeLocation: "부산광역시 사하구", cafeScore: 4.3, cafeImage: "Store1", cafeTime: "09:00 - 23:00")
-                           , CafeInfo(cafeName: "숨바꼭질 2호점", cafeLocation: "부산광역시 강서구", cafeScore: 5.0, cafeImage: "Store2", cafeTime: "09:00 - 20:00")
-                           , CafeInfo(cafeName: "비밀의화원 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 1.8, cafeImage: "Store3", cafeTime: "09:00 - 21:00")
-                           , CafeInfo(cafeName: "비트포비아 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 2.4, cafeImage: "Store4", cafeTime: "09:00 - 22:30")
-                           , CafeInfo(cafeName: "룸즈에이 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 3.1, cafeImage: "Store5", cafeTime: "09:00 - 23:00")
-                           , CafeInfo(cafeName: "지구별방탈출 대구점", cafeLocation: "대구광역시", cafeScore: 4.6, cafeImage: "Store6", cafeTime: "09:00 - 23:00")
-                           , CafeInfo(cafeName: "지구별방탈출 홍대점", cafeLocation: "서울특별시 어딘가", cafeScore: 5.0, cafeImage: "Store7", cafeTime: "10:00 - 23:00")
-                           , CafeInfo(cafeName: "비밀의화원 시네마틱혜화점", cafeLocation: "서울특별시 어딘가2", cafeScore: 3.0, cafeImage: "Store1", cafeTime: "09:00 - 23:00")
-                           , CafeInfo(cafeName: "비트포비아던전 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 4.7, cafeImage: "Store2", cafeTime: "10:00 - 22:00")
+public var CafeInfoData = [CafeInfo(cafeName: "숨바꼭질 1호점", cafeLocation: "부산광역시 사하구", cafeScore: 4.3, cafeImage: "Store1", cafeTime: "09:00 - 23:00", recomCafe: "웨딩크루즈 살인사건")
+                           , CafeInfo(cafeName: "숨바꼭질 2호점", cafeLocation: "부산광역시 강서구", cafeScore: 5.0, cafeImage: "Store2", cafeTime: "09:00 - 20:00", recomCafe: "없음")
+                           , CafeInfo(cafeName: "비밀의화원 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 1.8, cafeImage: "Store3", cafeTime: "09:00 - 21:00", recomCafe: "저주받은 집, 반 고흐의 방")
+                           , CafeInfo(cafeName: "비트포비아 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 2.4, cafeImage: "Store4", cafeTime: "09:00 - 22:30", recomCafe: "스토커")
+                           , CafeInfo(cafeName: "룸즈에이 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 3.1, cafeImage: "Store5", cafeTime: "09:00 - 23:00", recomCafe: "웨딩크루즈 살인사건")
+                           , CafeInfo(cafeName: "지구별방탈출 대구점", cafeLocation: "대구광역시", cafeScore: 4.6, cafeImage: "Store6", cafeTime: "09:00 - 23:00", recomCafe: "없음")
+                           , CafeInfo(cafeName: "지구별방탈출 홍대점", cafeLocation: "서울특별시 어딘가", cafeScore: 5.0, cafeImage: "Store7", cafeTime: "10:00 - 23:00", recomCafe: "없음")
+                           , CafeInfo(cafeName: "비밀의화원 시네마틱혜화점", cafeLocation: "서울특별시 어딘가2", cafeScore: 3.0, cafeImage: "Store1", cafeTime: "09:00 - 23:00", recomCafe: "없음")
+                           , CafeInfo(cafeName: "비트포비아던전 서면점", cafeLocation: "부산광역시 부산진구", cafeScore: 4.7, cafeImage: "Store2", cafeTime: "10:00 - 22:00", recomCafe: "없음")
                              ]
 
 public var ThemaInfoData = [ThemaInfo(cafeName: "비밀의화원 서면점", themaName: "저주받은 집", themaKeyword: "활동성 낮음, 장치비율 보통", themaGenre: "공포", themaDescription: "무서운 테마 어쩌구 저쩌구", themaScore: 3.5, themaImageName: "Thema1", themaMember: 5)
@@ -173,7 +174,7 @@ public var ReserveInfoData = [ReserveInfo(cafeName: "비밀의화원 서면점",
                           , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "저주받은 집", reserveDate: "2022-09-25", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 101)
                               , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "저주받은 집", reserveDate: "2022-09-26", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30", "19:00"], reserveCode: 102)
                               , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "저주받은 집", reserveDate: "2022-09-28", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 103)
-                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "무저주받은 집", reserveDate: "2022-09-30", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 104)]
+                              , ReserveInfo(cafeName: "비밀의화원 서면점", themeName: "저주받은 집", reserveDate: "2022-09-30", reserveTime: ["09:00", "11:30", "13:00", "14:30", "16:00", "17:30"], reserveCode: 104)]
 
 public var ReserveStateDate = [ReserveState(reserveCode: 100, reserveST: [true, true, true, true, false, false])
                                , ReserveState(reserveCode: 101, reserveST: [true, true, true, true, true, false, true])

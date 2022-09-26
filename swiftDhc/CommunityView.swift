@@ -12,6 +12,7 @@ struct CommunityView: View {
     @State var structOfPost = PostInfoData
     @State var structOfComment = CommentInfoData
     
+//    @State var tagOfCommunity:Int? = nil
 //    var commentCnt = structOfComment.count
     
 //    var commentCnt = 3

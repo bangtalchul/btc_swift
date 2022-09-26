@@ -119,7 +119,7 @@ struct MainView: View {
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(cafeName:valueCafeInfo.cafeName, titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore, timeText: valueCafeInfo.cafeTime
+                                    NavigationLink(destination: IntroView(cafeName:valueCafeInfo.cafeName, titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore, timeText: valueCafeInfo.cafeTime, recomCafe: valueCafeInfo.recomCafe
 //                                                                          , rootIsActive: self.$isActive
                                                                          )
 //                                        , isActive: self.$isActive
@@ -227,8 +227,7 @@ struct MainView: View {
                             ForEach(structOfCafeInfo){
                                 valueCafeInfo in
                                 HStack{
-                                    NavigationLink(destination: IntroView(cafeName:valueCafeInfo.cafeName, titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore
-//                                                                          , rootIsActive: self.$isActive
+                                    NavigationLink(destination: IntroView(cafeName:valueCafeInfo.cafeName, titleText: valueCafeInfo.cafeName, imageText: valueCafeInfo.cafeImage, locationText: valueCafeInfo.cafeLocation, score: valueCafeInfo.cafeScore, timeText: valueCafeInfo.cafeTime, recomCafe: valueCafeInfo.recomCafe
                                                                          )
 //                                                   , isActive: self.$isActive
                                     ){

@@ -19,6 +19,7 @@ struct IntroView: View {
     var locationText = ""
     var score = 0.0
     var timeText = ""
+    var recomCafe = ""
 //    var structOfCafeInfo = CafeInfo(cafeName: "", cafeLocation: "")
     
     @State var structOfThemaInfo = ThemaInfoData
@@ -66,9 +67,9 @@ struct IntroView: View {
                     HStack {
                         Text("추천테마")
                             .font(.title2)
-                        
-                        Text("테마1").foregroundColor(.gray)
-                        Text("테마2").foregroundColor(.gray)
+                        Text(recomCafe).foregroundColor(.gray)
+                        //Text("테마1").foregroundColor(.gray)
+                        //Text("테마2").foregroundColor(.gray)
                     }
                     .padding(.top, 2)
                     

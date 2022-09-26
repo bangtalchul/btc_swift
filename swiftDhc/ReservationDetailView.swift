@@ -151,6 +151,7 @@ struct ReservationDetailView: View {
             }
             .padding()
 //            Text(cafeText)
+            
         }
 //        .padding()
     }

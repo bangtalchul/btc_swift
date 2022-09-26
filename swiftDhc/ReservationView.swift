@@ -57,13 +57,38 @@ struct ReservationView: View {
 //                    .font(.title3)
 //                    .foregroundColor(.gray)
                     
+                    // 안내
+                    // 인원
+                    VStack{
+                        Text("인원 안내")
+                             .font(.title2)
+                             .fontWeight(.semibold)
+                             .padding(.bottom, 2)
+                    
+                        Text("이 테마의 권장 인원 수는 ")
+                            .foregroundColor(.gray)
+                            .font(.body)
+                        +
+                        Text(String(format: "%0d", memberCnt))
+                        +
+                        Text("명이에요.")
+                            .foregroundColor(.gray)
+                            .font(.body)
+                    
+                    }
+                    
+                    Divider()
+                        .frame(width: 200)
+                        .padding()
+                    
+                    
                     // 달력 + 날짜 선택
                     VStack {
                         Text("날짜 선택")
                             .font(.title2)
                             .fontWeight(.semibold)
                         
-                        Text("2주 후의 날까지 예약이 가능해요")
+                        Text("2주 후의 날까지 예약이 가능해요.")
                             .font(.body)
                             .foregroundColor(.gray)
                         
@@ -133,32 +158,32 @@ struct ReservationView: View {
                                             
                     }
                     
-                    Divider()
-                        .frame(width: 200)
-                        .padding()
-//                    Spacer()
-                    // 인원
-                    VStack{
-                        Text("인원 추가")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                            .padding(.bottom, 2)
-                        
-                        Text("이 테마의 권장 인원 수는 ")
-                            .foregroundColor(.gray)
-                            .font(.body)
-                        +
-                        Text(String(format: "%0d", memberCnt))
-                        +
-                        Text("명입니다.")
-                            .foregroundColor(.gray)
-                            .font(.body)
-                        
-                        
-                        ReservationPartyView()
-                        
-                        
-                    }
+//                    Divider()
+//                        .frame(width: 200)
+//                        .padding()
+////                    Spacer()
+//                    // 인원
+//                    VStack{
+//                        Text("인원 추가")
+//                            .font(.title2)
+//                            .fontWeight(.semibold)
+//                            .padding(.bottom, 2)
+//
+//                        Text("이 테마의 권장 인원 수는 ")
+//                            .foregroundColor(.gray)
+//                            .font(.body)
+//                        +
+//                        Text(String(format: "%0d", memberCnt))
+//                        +
+//                        Text("명입니다.")
+//                            .foregroundColor(.gray)
+//                            .font(.body)
+//
+//
+//                        //ReservationPartyView()
+//
+//
+//                    }
                     
                     
                     
