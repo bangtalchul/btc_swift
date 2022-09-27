@@ -16,7 +16,7 @@ struct ThemaView: View {
     var cafeText = ""
     var score = 0.0
     
-    var keywordText = ""
+//    var keywordText = ""
     var genreText = ""
     var descText = ""
     
@@ -57,8 +57,8 @@ struct ThemaView: View {
                     HStack {
                         Text(genreText)
                         Text(" | ")
-                        Text(keywordText)
-                        Text(" | ")
+//                        Text(keywordText)
+//                        Text(" | ")
                         Text(String(format: "%0d", member))
                         Text("인 추천")
                     }

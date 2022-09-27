@@ -173,7 +173,7 @@ struct MainView: View {
                             ForEach(structOfThemaInfo){
                                 valueThemaInfo in
                                 HStack{
-                                    NavigationLink(destination: ThemaView(themaImageText: valueThemaInfo.themaImageName, themaText: valueThemaInfo.themaName, cafeText:valueThemaInfo.cafeName, score: valueThemaInfo.themaScore, keywordText: valueThemaInfo.themaKeyword, genreText: valueThemaInfo.themaGenre, descText: valueThemaInfo.themaDescription,        member: valueThemaInfo.themaMember
+                                    NavigationLink(destination: ThemaView(themaImageText: valueThemaInfo.themaImageName, themaText: valueThemaInfo.themaName, cafeText:valueThemaInfo.cafeName, score: valueThemaInfo.themaScore, genreText: valueThemaInfo.themaGenre, descText: valueThemaInfo.themaDescription,        member: valueThemaInfo.themaMember
 //                                                                          , rootIsActive: self.$isActive
                                                                          )
 //                                                   , isActive: self.$isActive
@@ -221,6 +221,14 @@ struct MainView: View {
 //                                        }
 //                                    }
 //                                }
+//                            }
+                            
+                            
+//                            ForEach(0..<5) { index in
+//                                HStack {
+//                                    NavigationLink(destination: IntroView(cafeImageName: structOfCafeInfo[index*2+1], cafeName: structOfCafeInfo[index*2+1], titleText: structOfCafeInfo[index*2+1], imageText: <#T##arg#>, locationText: <#T##arg#>, score: <#T##arg#>, timeText: <#T##arg#>, recomCafe: structOfCafeInfo[index*2+1], structOfThemaInfo: <#T##arg#>, valueThemaImage: <#T##String#>))
+//                                }
+//
 //                            }
                             
                             // 220828 정흐l

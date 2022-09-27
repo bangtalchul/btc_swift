@@ -38,11 +38,14 @@ struct IntroView: View {
                     .resizable()
                     .frame(height: 250)
                     .clipped()
+                    .scaledToFill()
                     .padding(EdgeInsets(top:0, leading:0, bottom:20, trailing:0))
                 
                 //220827 수현추가(카페명)
                 Text(titleText)
                     .font(.title)
+                
+                Divider()
                 
                 // 카페 정보
                 //(alignment: .leading)
@@ -50,16 +53,22 @@ struct IntroView: View {
                     
                     VStack {
                         HStack {
-                            Image(systemName: "location.fill").foregroundColor(.gray)
+                            Image(systemName: "location.fill")
+                                .foregroundColor(.gray)
                             Text(locationText)
                                 .foregroundColor(.gray)
+                                .fixedSize(horizontal: true, vertical: false)
                         }
                         .padding(.trailing, 2)
                         
-                        
-                        Text(timeText)
-                            .foregroundColor(.gray)
-                            .padding(.top, 1)
+                        HStack {
+                            Image(systemName: "clock.fill")
+                                .foregroundColor(.gray)
+                            Text(timeText)
+                                .foregroundColor(.gray)
+//                                .padding(.top, 1)
+                        }
+                        .padding(.top, 1)
                         
                     }
                     .padding()
@@ -123,7 +132,6 @@ struct IntroView: View {
                                     , themaText: $valueThemaInfo.wrappedValue.themaName
                                     , cafeText:$valueThemaInfo.wrappedValue.cafeName
                                     , score: $valueThemaInfo.wrappedValue.themaScore
-                                    , keywordText: $valueThemaInfo.wrappedValue.themaKeyword
                                     , genreText: $valueThemaInfo.wrappedValue.themaGenre
                                     , descText: $valueThemaInfo.wrappedValue.themaDescription
                                     , member: $valueThemaInfo.wrappedValue.themaMember
